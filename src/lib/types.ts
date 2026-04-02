@@ -72,6 +72,13 @@ export interface BlogPost {
   publishedAt: string;
   readTime: string;
   imageTone: ImageTone;
+  // Detail page additions
+  content?: string;
+  contentBlocks?: Array<{
+    type: "paragraph" | "quote" | "h2" | "h3" | "ul";
+    value: string;
+    items?: string[];
+  }>;
 }
 
 export interface FaqItem {
