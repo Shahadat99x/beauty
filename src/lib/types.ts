@@ -12,6 +12,11 @@ export interface TrustMetric {
   label: string;
 }
 
+export interface ServiceProcessStep {
+  title: string;
+  description: string;
+}
+
 export interface Service {
   slug: string;
   title: string;
@@ -21,6 +26,11 @@ export interface Service {
   priceFrom: string;
   highlight: string;
   imageTone: ImageTone;
+  // Detail page additions
+  overview?: string;
+  benefits?: string[];
+  process?: ServiceProcessStep[];
+  recommendedSpecialists?: string[]; // specialist slugs
 }
 
 export interface Specialist {
@@ -31,6 +41,10 @@ export interface Specialist {
   quote: string;
   specialties: string[];
   imageTone: ImageTone;
+  // Detail page additions
+  bio?: string;
+  signatureServices?: string[]; // service slugs
+  recentWorkImages?: Array<{ title: string; aspect: MediaAspect; tone: ImageTone }>;
 }
 
 export interface Testimonial {
@@ -63,6 +77,21 @@ export interface BlogPost {
 export interface FaqItem {
   question: string;
   answer: string;
+  category?: string;
+}
+
+export interface PricingPackage {
+  title: string;
+  description: string;
+  price: string;
+  items: string[];
+  isPopular?: boolean;
+}
+
+export interface PricingCategory {
+  title: string;
+  description: string;
+  packages: PricingPackage[];
 }
 
 export interface PricingSnippet {

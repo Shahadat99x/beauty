@@ -1,11 +1,12 @@
 import type { NavItem, StudioInfo, TrustMetric } from "@/lib/types";
 
 export const navigation: NavItem[] = [
-  { label: "Services", href: "#services" },
-  { label: "Specialists", href: "#specialists" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Journal", href: "#journal" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "Specialists", href: "/specialists" },
+  { label: "About", href: "/about" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const trustMetrics: TrustMetric[] = [
