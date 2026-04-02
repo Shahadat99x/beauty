@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/cn";
 import { MediaFrame } from "./media-frame";
 import type { ImageTone } from "@/lib/types";
@@ -24,40 +24,40 @@ export function ComparisonSlider({
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleMove = (clientX: number) => {
+  const handleMove = useCallback((clientX: number) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
     const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
     const percent = Math.max(0, Math.min((x / rect.width) * 100, 100));
     setSliderPosition(percent);
-  };
+  }, []);
 
-  const handleMouseMove = (e: MouseEvent) => {
+  const handleMouseMove = useCallback((e: MouseEvent) => {
     if (!isDragging) return;
     handleMove(e.clientX);
-  };
+  }, [handleMove, isDragging]);
 
-  const handleTouchMove = (e: TouchEvent) => {
+  const handleTouchMove = useCallback((e: TouchEvent) => {
     if (!isDragging) return;
     handleMove(e.touches[0].clientX);
-  };
+  }, [handleMove, isDragging]);
 
-  const handleMouseUp = () => setIsDragging(false);
+  const stopDragging = useCallback(() => setIsDragging(false), []);
 
   useEffect(() => {
     if (isDragging) {
       window.addEventListener("mousemove", handleMouseMove);
-      window.addEventListener("mouseup", handleMouseUp);
+      window.addEventListener("mouseup", stopDragging);
       window.addEventListener("touchmove", handleTouchMove, { passive: false });
-      window.addEventListener("touchend", handleMouseUp);
+      window.addEventListener("touchend", stopDragging);
     }
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseup", handleMouseUp);
+      window.removeEventListener("mouseup", stopDragging);
       window.removeEventListener("touchmove", handleTouchMove);
-      window.removeEventListener("touchend", handleMouseUp);
+      window.removeEventListener("touchend", stopDragging);
     };
-  }, [isDragging]);
+  }, [handleMouseMove, handleTouchMove, isDragging, stopDragging]);
 
   return (
     <div
@@ -88,7 +88,7 @@ export function ComparisonSlider({
         className="absolute inset-y-0 left-0 overflow-hidden"
         style={{ width: `${sliderPosition}%` }}
       >
-        <div style={{ width: containerRef.current?.offsetWidth || "100vw", height: "100%" }}>
+        <div className="absolute inset-0 min-w-full">
           <MediaFrame
             aspect="landscape"
             tone={beforeTone}

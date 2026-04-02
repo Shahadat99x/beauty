@@ -6,7 +6,7 @@ interface TestimonialCardProps {
 
 export function TestimonialCard({ testimonial }: TestimonialCardProps) {
   return (
-    <article className="surface-card flex h-full flex-col rounded-[2rem] p-6 sm:p-7">
+    <article className="surface-card flex h-full flex-col rounded-[2rem] p-6 transition-[transform,box-shadow,border-color] duration-500 ease-out hover:-translate-y-1 hover:border-border-strong/70 hover:shadow-[var(--shadow-card-hover)] sm:p-7">
       <div className="flex items-center justify-between gap-4">
         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-muted">
           {testimonial.service}

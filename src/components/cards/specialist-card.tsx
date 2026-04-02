@@ -9,11 +9,12 @@ interface SpecialistCardProps {
 
 export function SpecialistCard({ specialist }: SpecialistCardProps) {
   return (
-    <article className="surface-card flex h-full flex-col rounded-[2rem] p-4 sm:p-5">
+    <article className="surface-card group flex h-full flex-col rounded-[2rem] p-4 transition-[transform,box-shadow,border-color] duration-500 ease-out hover:-translate-y-1 hover:border-border-strong/70 hover:shadow-[var(--shadow-card-hover)] sm:p-5">
       <MediaFrame
         aspect="portrait"
         title={specialist.name}
         subtitle={specialist.role}
+        label="Resident specialist"
         tone={specialist.imageTone}
         className="rounded-[1.75rem]"
       />
@@ -22,7 +23,7 @@ export function SpecialistCard({ specialist }: SpecialistCardProps) {
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted">
             {specialist.experience}
           </p>
-          <h3 className="font-serif text-3xl leading-none text-ink-strong">
+          <h3 className="font-serif text-[2rem] leading-[0.95] text-ink-strong transition-colors duration-300 group-hover:text-ink">
             {specialist.name}
           </h3>
           <p className="text-sm leading-7 text-muted">{specialist.role}</p>

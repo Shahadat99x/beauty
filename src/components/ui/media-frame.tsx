@@ -4,6 +4,7 @@ import { cn } from "@/lib/cn";
 interface MediaFrameProps {
   title: string;
   subtitle: string;
+  label?: string;
   tone?: ImageTone;
   aspect?: MediaAspect;
   className?: string;
@@ -28,6 +29,7 @@ const aspectClasses: Record<MediaAspect, string> = {
 export function MediaFrame({
   title,
   subtitle,
+  label = "Editorial placeholder",
   tone = "champagne",
   aspect = "portrait",
   className,
@@ -43,7 +45,7 @@ export function MediaFrame({
     >
       <div
         className={cn(
-          "absolute inset-0 bg-gradient-to-br transition-transform duration-700 group-hover:scale-[1.03]",
+          "absolute inset-0 bg-gradient-to-br transition-transform duration-700 ease-out group-hover:scale-[1.035]",
           toneClasses[tone],
         )}
       />
@@ -53,17 +55,19 @@ export function MediaFrame({
       <div className="absolute bottom-[18%] left-[12%] h-20 w-40 rounded-[1.75rem] border border-white/45 bg-white/18 backdrop-blur-sm" />
       <div
         className={cn(
-          "absolute inset-x-4 bottom-4 rounded-[1.5rem] border border-white/60 bg-white/68 p-4 backdrop-blur-md sm:inset-x-5 sm:bottom-5 sm:p-5",
+          "absolute inset-x-4 bottom-4 rounded-[1.5rem] border border-white/60 bg-white/68 p-4 backdrop-blur-md transition-transform duration-500 ease-out group-hover:translate-y-[-0.2rem] sm:inset-x-5 sm:bottom-5 sm:p-5",
           overlayClassName,
         )}
       >
         <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-muted">
-          Placeholder visual
+          {label}
         </p>
         <h3 className="mt-2 font-serif text-2xl leading-none text-ink-strong sm:text-3xl">
           {title}
         </h3>
-        <p className="mt-2 max-w-xs text-sm leading-6 text-muted">{subtitle}</p>
+        {subtitle ? (
+          <p className="mt-2 max-w-xs text-sm leading-6 text-muted">{subtitle}</p>
+        ) : null}
       </div>
     </div>
   );

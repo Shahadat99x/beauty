@@ -9,11 +9,12 @@ interface ServiceCardProps {
 
 export function ServiceCard({ service }: ServiceCardProps) {
   return (
-    <article className="surface-card flex h-full flex-col rounded-[2rem] p-4 sm:p-5">
+    <article className="surface-card group flex h-full flex-col rounded-[2rem] p-4 transition-[transform,box-shadow,border-color] duration-500 ease-out hover:-translate-y-1 hover:border-border-strong/70 hover:shadow-[var(--shadow-card-hover)] sm:p-5">
       <MediaFrame
         aspect="landscape"
         title={service.title}
         subtitle={service.highlight}
+        label={service.category}
         tone={service.imageTone}
         className="rounded-[1.6rem]"
       />
@@ -23,7 +24,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
           <span className="text-sm font-medium text-muted">{service.duration}</span>
         </div>
         <div className="space-y-3">
-          <h3 className="font-serif text-3xl leading-none text-ink-strong">
+          <h3 className="font-serif text-[2rem] leading-[0.95] text-ink-strong transition-colors duration-300 group-hover:text-ink">
             {service.title}
           </h3>
           <p className="text-sm leading-7 text-muted">{service.excerpt}</p>
