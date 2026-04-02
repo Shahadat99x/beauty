@@ -151,4 +151,52 @@ export const services: Service[] = [
     ],
     recommendedSpecialists: ["amelia-ruskaite", "monika-vy"]
   },
+  {
+    slug: "lueur-brightening-glow",
+    title: "Lueur Brightening Glow",
+    category: "Specialized Rituals",
+    excerpt: "A high-performance brightening ritual targeting hyperpigmentation and environmental stress.",
+    duration: "80 min",
+    priceFrom: "From €125",
+    highlight: "Uniform, luminous, and deeply oxygenated skin.",
+    imageTone: "champagne",
+    overview: "Designed for those seeking an immediate correction in tone and texture. This ritual combines vitamin-rich oxygen infusions with advanced massage to brighten dullness and even out sun damage. Perfect for post-holiday recovery or season changes.",
+    benefits: [
+      "Fades the appearance of age spots and redness",
+      "Infuses deep-level oxygenation for tired skin",
+      "Provides intense antioxidant protection",
+      "Creates a vibrant, 'lit-from-within' appearance"
+    ],
+    process: [
+      { title: "Oxygen Cleanse", description: "A double-action cleanse using oxygenated milk to purify the pores." },
+      { title: "Vitamin C Infusion", description: "A stabilized Vitamin C serum is layered through light-pressure application." },
+      { title: "Brightening Mask", description: "A cooling charcoal and algae mask to draw out impurities while infusing light." },
+      { title: "The Finish", description: "Sealed with a nutrient-rich barrier balm and signature solar protection." }
+    ],
+    recommendedSpecialists: ["monika-vy", "amelia-ruskaite"]
+  },
+  {
+    slug: "sculpted-eye-lift",
+    title: "The Sculpted Eye Lift",
+    category: "Lashes & Brows",
+    excerpt: "A focused ritual targeting the delicate eye area with lifting massage and precision styling.",
+    duration: "45 min",
+    priceFrom: "From €55",
+    highlight: "A lifted, wide-awake effect for the entire upper face.",
+    imageTone: "taupe",
+    overview: "This specialized ritual focuses entirely on the architecture of the eyes. We combine a micro-lifting massage using cold stones with precision brow shaping and a lash tint to harmonize and lift your gaze naturally.",
+    benefits: [
+      "Visibly reduces under-eye puffiness",
+      "Shapes the brows to lift the orbital bone",
+      "Intensifies the gaze with custom tinting",
+      "Immediate awake and refreshed look"
+    ],
+    process: [
+      { title: "Cold Stone Drainage", description: "Light-pressure massage using jade rollers to flush fluid from around the eyes." },
+      { title: "Precision Mapping", description: "We re-calibrate your brow arch to open the eye area." },
+      { title: "Tinting & Definition", description: "A subtle stain is applied to lashes and brows for depth." },
+      { title: "Repairing Balm", description: "A peptide-rich eye cream is massaged in to lock in the lift." }
+    ],
+    recommendedSpecialists: ["eva-mont"]
+  }
 ];

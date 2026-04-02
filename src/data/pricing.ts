@@ -74,5 +74,24 @@ export const pricingCategories: PricingCategory[] = [
         items: ["Bespoke skin prep", "Long-wear soft glam", "Bridal party options", "Touch-up kit included"]
       }
     ]
+  },
+  {
+    title: "Studio Memberships",
+    description: "Consistent care for those who prioritize their skin's long-term health and a recurring moment of calm.",
+    packages: [
+      {
+        title: "The Lueur Essential",
+        description: "Monthly maintenance for a constant glow.",
+        price: "€85 /mo",
+        items: ["1 Signature Ritual per month", "10% off all retail products", "Priority booking window", "Complimentary seasonal gift"]
+      },
+      {
+        title: "The Lueur Collective",
+        description: "Advanced care for dedicated skin transformation.",
+        price: "€160 /mo",
+        items: ["2 Signature Rituals per month", "15% off all retail products", "Infinite guest passes (1/mo)", "Private event invitations"],
+        isPopular: true
+      }
+    ]
   }
 ];
