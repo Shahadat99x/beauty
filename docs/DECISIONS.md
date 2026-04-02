@@ -55,3 +55,12 @@ Phase 0 establishes a tokenized soft luxury design system with Cormorant Garamon
 
 ### D15
 Until real photography is added, imagery will use reusable editorial placeholder media frames so layouts can stay image-led without locking the project into temporary assets.
+
+### D16
+Phase 1: Adopted `embla-carousel-react` for interactive sections (Services, Testimonials) to keep performance high and allow headless styling that matches the soft luxury feel perfectly.
+
+### D17
+Phase 1: Added a `ComparisonSlider` component for Before/After treatment visual proof, prioritizing an interactive results-led experience within the homepage.
+
+### D18
+Phase 2: Combined FAQ with the Pricing Page structure instead of creating a standalone sparse FAQ page, ensuring that crucial commercial friction points (investment and policy questions) are handled gracefully within a single premium layout.

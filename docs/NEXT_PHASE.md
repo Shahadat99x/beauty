@@ -1,53 +1,40 @@
 # NEXT_PHASE
 
-## Phase 1 — Core Pages And Homepage Enrichment
+## Phase 3 — Rich Visual Content and Editorial Polish
 
 ## Goal
-Use the completed foundation to build the first real page set and add a few stronger showcase moments to the homepage.
+Build the final core content areas focused on rich media: the Gallery Index, the Journal Archive, and the Journal Detail pages. This completes the full marketing funnel of the studio concept.
 
 ## Scope
-Expand depth without breaking the clean Phase 0 system.
-Keep the project frontend-only with hardcoded content.
+Continue using hardcoded data.
+Build visually engaging layout structures for images and editorial text.
 
 ## Tasks
-1. Deepen the homepage
-   - turn one signature services area into a richer interactive showcase
-   - add a stronger before/after or results-focused section
-   - upgrade testimonials into a carousel or more editorial proof layout
-   - make the gallery feel closer to final portfolio quality
+1. Build Gallery Index
+   - `app/gallery/page.tsx`
+   - explore a layout system (masonry, elegant grid) that can be filtered loosely by service type if needed
+   - maintain soft luxury feel without turning it into a chaotic collage
 
-2. Build the first inner pages
-   - Services
-   - Specialists
-   - About
-   - Contact / Booking
-   - FAQ or Pricing
+2. Build Journal Archive
+   - `app/journal/page.tsx`
+   - grid of `BlogCard` components 
+   - feature area for the newest or most important post
 
-3. Reuse and extend the shared system
-   - keep the same design tokens
-   - reuse card and heading patterns
-   - preserve mobile spacing and touch targets
-   - keep future CMS conversion straightforward
-
-4. Improve content depth
-   - expand service descriptions
-   - expand specialist bios
-   - add stronger contact and studio detail blocks
-   - prepare richer gallery and journal content
+3. Build Journal Detail layout
+   - `app/journal/[slug]/page.tsx`
+   - elegant editorial reading experience
+   - support for text, blockquotes, and embedded imagery
+   - subtle cross-linking to services
 
 ## Acceptance Criteria
-- homepage has at least one stronger interactive showcase
-- first core inner pages exist with consistent quality
-- layout and component system remain coherent across pages
-- responsive behavior stays premium on mobile, tablet, and desktop
-- no backend/admin/auth/database work is introduced
+- Gallery visually proves the studio's high quality
+- Journal pages feel like a premium lifestyle magazine, not a standard blog
+- Layout gracefully degrades on mobile devices
+- Full project structure is finally connected and navigable
 
 ## Do Not Do
-- no real booking engine
-- no CMS/admin panel
-- no backend APIs for this phase
-- no unnecessary dependency sprawl
-- no dark glam direction shift
+- no CMS integration
+- no backend wiring
+- stay within the existing token system
+- do not over-engineer an article editor or complex markdown parser, just hardcode the article shapes
 
-## Output Expected
-A polished multi-page premium frontend that still stays clean, modular, and ready for later detail-page work.

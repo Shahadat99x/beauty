@@ -24,8 +24,25 @@ Frontend-only premium beauty salon / beauty studio website with hardcoded conten
 - AI_RULES.md
 
 ## Current Build State
-Phase 0 foundation completed.
-The project now has a working frontend app shell and a polished homepage base.
+Phase 2 completed.
+The project now includes deep dynamic-style detail pages for services and specialists, plus a comprehensive pricing/FAQ hub.
+
+## Completed In Phase 2
+- Built Service Detail pages (`/services/[slug]`) with process timelines and related specialists
+- Built Specialist Profile pages (`/specialists/[slug]`) with bios, work previews, and signature services
+- Built immersive Pricing Page (`/pricing`) that integrates FAQs contextually
+- Expanded hardcoded data structures significantly for `services`, `specialists`, `pricing`, and `faq`
+- Expanded typescript interfaces in `types.ts`
+- Wired service cards and specialist cards to their detailed profiles
+
+## Completed In Phase 1
+- Integrated `embla-carousel-react` for premium sliders
+- Upgraded Signature Services to an interactive carousel
+- Upgraded Testimonials to a smooth carousel
+- Added interactive before/after `ComparisonSlider` component
+- Expanded `data/` modules with richer content
+- Built core static pages: `/services`, `/specialists`, `/about`, and `/contact`
+- Contact page includes a polished booking request form layout
 
 ## Completed In Phase 0
 - Next.js + TypeScript + Tailwind frontend scaffold created
@@ -42,53 +59,28 @@ The project now has a working frontend app shell and a polished homepage base.
 - mobile, tablet, and desktop responsive base verified
 
 ## Priority Order
-1. Foundation and design system
-2. Homepage
-3. Core pages
-4. Detail pages
-5. Rich content pages
-6. Polish and portfolio cleanup
+1. Foundation and design system (Done)
+2. Homepage and core pages (Done)
+3. Detail pages (Done)
+4. Rich content pages
+5. Polish and portfolio cleanup
 
 ## Planned Main Pages
-- Home
-- Services
-- Service Detail
-- Specialists
-- Specialist Detail
+- Home (Done)
+- Services (Done)
+- Service Detail (Done)
+- Specialists (Done)
+- Specialist Detail (Done)
 - Gallery
 - Blog
 - Blog Detail
-- About
-- Contact / Booking
-- FAQ
-- Pricing
-
-## Key Frontend Goals
-- premium hero
-- rich homepage
-- image-led design
-- elegant service cards
-- specialist cards / profiles
-- gallery section
-- blog preview
-- responsive design
-- smooth motion
-- good mobile experience
-
-## Known Constraints
-- keep project fast
-- keep docs compact
-- avoid feature creep
-- avoid backend work
-- avoid admin work
-- avoid excessive file sprawl
+- About (Done)
+- Pricing (Done)
+- FAQ (Done - merged into Pricing for better UX)
+- Contact / Booking (Done)
 
 ## Immediate Next Goal
-Start Phase 1: expand the foundation into richer homepage interactions and core inner pages.
+Start Phase 3: Build rich content pages (Gallery Index and filtering, Blog Archive, and Blog Post Detail) to complete the website ecosystem.
 
 ## Open Creative Direction
 Use soft luxury, not dark glam, not fashion-editorial-first, not medical beauty-tech.
-
-## Notes
-The homepage will be the most important page and should receive the highest design effort.
-Phase 0 intentionally keeps booking actions presentational only and defers real photography, sliders, and inner-page depth to the next phase.
