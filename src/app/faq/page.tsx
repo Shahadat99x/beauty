@@ -1,9 +1,8 @@
 import { faqItems } from "@/data/faq";
-import { Badge } from "@/components/ui/badge";
-import { Container } from "@/components/ui/container";
-import { SectionHeading } from "@/components/ui/section-heading";
 import { CtaBlock } from "@/components/sections/cta-block";
 import { Button } from "@/components/ui/button";
+import { Container } from "@/components/ui/container";
+import { PageIntro } from "@/components/ui/page-intro";
 
 export const metadata = {
   title: "FAQ | Maison de Lueur",
@@ -15,19 +14,11 @@ export default function FaqPage() {
 
   return (
     <>
-      <section className="pb-12 pt-8 sm:pt-14 lg:pb-16 lg:pt-20">
-        <Container>
-          <div className="mx-auto max-w-3xl text-center">
-            <Badge>Client Care</Badge>
-            <h1 className="mt-8 font-serif text-[3.25rem] leading-[0.92] text-ink-strong sm:text-[4.6rem] lg:text-[5.5rem]">
-              Commonly asked.
-            </h1>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-muted sm:text-xl">
-              Everything you need to know about preparing for your visit and maintaining your results.
-            </p>
-          </div>
-        </Container>
-      </section>
+      <PageIntro
+        eyebrow="Client care"
+        title="Commonly asked."
+        description="Everything you need to know about booking, treatment prep, aftercare, and how the studio works before your first visit."
+      />
 
       <section className="section-space pt-0">
         <Container>
@@ -41,17 +32,15 @@ export default function FaqPage() {
                 <div className="grid gap-6">
                   {faqItems
                     .filter((item) => item.category === category)
-                    .map((item, idx) => (
+                    .map((item) => (
                       <div
-                        key={idx}
-                        className="surface-card rounded-3xl p-8 transition-shadow hover:shadow-md"
+                        key={item.question}
+                        className="surface-card rounded-3xl p-8 transition-[transform,box-shadow,border-color] duration-500 ease-out hover:-translate-y-1 hover:border-border-strong/70 hover:shadow-[var(--shadow-card-hover)]"
                       >
                         <h3 className="text-lg font-semibold text-ink-strong">
                           {item.question}
                         </h3>
-                        <p className="mt-4 leading-8 text-muted">
-                          {item.answer}
-                        </p>
+                        <p className="mt-4 leading-8 text-muted">{item.answer}</p>
                       </div>
                     ))}
                 </div>
@@ -61,9 +50,12 @@ export default function FaqPage() {
 
           <div className="mt-20 flex flex-col items-center text-center">
             <div className="max-w-xl">
-              <h3 className="font-serif text-2xl text-ink-strong">Still have questions?</h3>
+              <h3 className="font-serif text-2xl text-ink-strong">
+                Still have questions?
+              </h3>
               <p className="mt-4 text-muted">
-                If you couldn't find the answer you were looking for, our concierge is here to help with any specific inquiries about your skin or our studio.
+                If you could not find the answer you were looking for, our concierge
+                is here to help with specific questions about your skin or our studio.
               </p>
               <div className="mt-8">
                 <Button href="/contact" variant="secondary" size="lg">
@@ -80,6 +72,10 @@ export default function FaqPage() {
         eyebrow="Consultation"
         title="Experience the studio."
         description="Connect with our specialists for a tailored beauty plan that respects your individual needs."
+        primaryHref="/contact"
+        primaryLabel="Ask a question"
+        secondaryHref="/services"
+        secondaryLabel="See treatment menu"
       />
     </>
   );

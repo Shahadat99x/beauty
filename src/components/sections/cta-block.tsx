@@ -6,6 +6,10 @@ interface CtaBlockProps {
   eyebrow: string;
   title: string;
   description: string;
+  primaryHref?: string;
+  primaryLabel?: string;
+  secondaryHref?: string;
+  secondaryLabel?: string;
 }
 
 export function CtaBlock({
@@ -13,11 +17,15 @@ export function CtaBlock({
   eyebrow,
   title,
   description,
+  primaryHref = "/services",
+  primaryLabel = "Explore signature services",
+  secondaryHref = "/contact",
+  secondaryLabel = "Start a consultation",
 }: CtaBlockProps) {
   return (
     <section id={id} className="section-space">
       <Container>
-        <div className="surface-panel overflow-hidden rounded-[2.5rem] px-6 py-10 sm:px-10 sm:py-14 lg:px-14">
+        <div className="surface-panel overflow-hidden rounded-[2.5rem] px-6 py-10 sm:px-8 sm:py-12 lg:px-12 lg:py-14">
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
             <div className="space-y-5">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-muted">
@@ -31,11 +39,11 @@ export function CtaBlock({
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
-              <Button href="#services" size="lg">
-                Explore signature services
+              <Button href={primaryHref} size="lg">
+                {primaryLabel}
               </Button>
-              <Button href="#contact" size="lg" variant="secondary">
-                Start a consultation
+              <Button href={secondaryHref} size="lg" variant="secondary">
+                {secondaryLabel}
               </Button>
             </div>
           </div>

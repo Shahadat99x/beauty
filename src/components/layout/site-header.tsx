@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { navigation, studioInfo } from "@/data/site";
 import { cn } from "@/lib/cn";
@@ -8,12 +9,13 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 
 export function SiteHeader() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 pt-4">
+    <header className="sticky top-0 z-50 pt-3 sm:pt-4">
       <Container>
-        <div className="surface-panel rounded-full px-4 py-3 sm:px-5">
+        <div className="surface-panel rounded-[2rem] px-4 py-3 shadow-[0_22px_50px_rgba(86,64,54,0.11)] sm:rounded-full sm:px-5">
           <div className="flex items-center justify-between gap-4">
             <Link href="/" className="min-w-0" onClick={() => setIsOpen(false)}>
               <span className="block truncate font-serif text-3xl leading-none text-ink-strong">
@@ -29,7 +31,12 @@ export function SiteHeader() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-sm font-medium text-muted transition-colors hover:text-ink"
+                  className={cn(
+                    "rounded-full px-3 py-2 text-sm font-medium transition-[color,background-color] duration-300",
+                    pathname === item.href
+                      ? "bg-white/78 text-ink shadow-[0_10px_26px_rgba(69,54,48,0.08)]"
+                      : "text-muted hover:bg-white/50 hover:text-ink",
+                  )}
                 >
                   {item.label}
                 </Link>
@@ -46,7 +53,7 @@ export function SiteHeader() {
               type="button"
               aria-expanded={isOpen}
               aria-label="Toggle navigation"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border-strong/70 bg-white/70 text-ink lg:hidden"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border-strong/70 bg-white/70 text-ink shadow-[0_10px_24px_rgba(69,54,48,0.08)] transition-colors duration-300 hover:bg-white lg:hidden"
               onClick={() => setIsOpen((current) => !current)}
             >
               <span className="flex flex-col gap-1.5">
@@ -75,15 +82,20 @@ export function SiteHeader() {
           <div
             className={cn(
               "overflow-hidden transition-[max-height,opacity,margin] duration-300 lg:hidden",
-              isOpen ? "mt-4 max-h-96 opacity-100" : "max-h-0 opacity-0",
+              isOpen ? "mt-4 max-h-[32rem] opacity-100" : "max-h-0 opacity-0",
             )}
           >
-            <nav className="flex flex-col gap-2 rounded-[1.5rem] border border-border/70 bg-white/75 p-3">
+            <nav className="flex flex-col gap-2 rounded-[1.5rem] border border-border/70 bg-white/75 p-3 shadow-[0_22px_42px_rgba(69,54,48,0.08)]">
               {navigation.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="rounded-[1rem] px-4 py-3 text-sm font-medium text-ink transition-colors hover:bg-shell-soft"
+                  className={cn(
+                    "rounded-[1rem] px-4 py-3 text-sm font-medium transition-[background-color,color] duration-300",
+                    pathname === item.href
+                      ? "bg-shell-soft text-ink-strong"
+                      : "text-ink hover:bg-shell-soft",
+                  )}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}

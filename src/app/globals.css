@@ -18,6 +18,8 @@
   --color-mocha: #8d7164;
   --shadow-soft: 0 18px 44px rgba(86, 64, 54, 0.08);
   --shadow-float: 0 28px 72px rgba(86, 64, 54, 0.14);
+  --shadow-card: 0 14px 34px rgba(86, 64, 54, 0.09);
+  --shadow-card-hover: 0 24px 56px rgba(86, 64, 54, 0.14);
 }
 
 @theme inline {
@@ -64,6 +66,7 @@ body {
   color: var(--color-ink);
   font-family: var(--font-manrope), sans-serif;
   min-height: 100vh;
+  overflow-x: clip;
 }
 
 a {
@@ -95,6 +98,11 @@ a {
   padding-block: clamp(3.25rem, 5vw, 5.5rem);
 }
 
+.page-intro-space {
+  padding-bottom: clamp(3rem, 5vw, 4.5rem);
+  padding-top: clamp(2.5rem, 4vw, 4.5rem);
+}
+
 .surface-panel {
   backdrop-filter: blur(18px);
   background: rgba(255, 252, 248, 0.76);
@@ -115,4 +123,81 @@ a {
 
 .text-balance {
   text-wrap: balance;
+}
+
+.editorial-flow > * + * {
+  margin-top: 1.4rem;
+}
+
+.editorial-flow h2,
+.editorial-flow h3 {
+  color: var(--color-ink-strong);
+  font-family: var(--font-cormorant), serif;
+  line-height: 0.98;
+}
+
+.editorial-flow h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-top: 3rem;
+}
+
+.editorial-flow h3 {
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  margin-top: 2.5rem;
+}
+
+.editorial-flow p,
+.editorial-flow li {
+  color: var(--color-muted);
+  font-size: clamp(1rem, 1.4vw, 1.12rem);
+  line-height: 1.95;
+}
+
+.editorial-flow blockquote {
+  border-left: 1px solid rgba(182, 136, 113, 0.6);
+  color: var(--color-ink);
+  font-family: var(--font-cormorant), serif;
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  font-style: italic;
+  line-height: 1.2;
+  margin: 2.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.editorial-flow ul {
+  display: grid;
+  gap: 0.95rem;
+  margin-top: 1.75rem;
+}
+
+.editorial-flow li {
+  list-style: none;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.editorial-flow li::before {
+  background: var(--color-accent-strong);
+  border-radius: 999px;
+  content: "";
+  height: 0.45rem;
+  left: 0;
+  position: absolute;
+  top: 0.8rem;
+  width: 0.45rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

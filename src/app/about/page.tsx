@@ -1,8 +1,8 @@
 import { philosophyPillars, studioInfo } from "@/data/site";
 import { CtaBlock } from "@/components/sections/cta-block";
-import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/ui/container";
 import { MediaFrame } from "@/components/ui/media-frame";
+import { PageIntro } from "@/components/ui/page-intro";
 import { SectionHeading } from "@/components/ui/section-heading";
 
 export const metadata = {
@@ -13,20 +13,11 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="pb-12 pt-8 sm:pt-14 lg:pb-16 lg:pt-20">
-        <Container>
-          <div className="mx-auto max-w-3xl text-center">
-            <Badge>Studio Story</Badge>
-            <h1 className="mt-8 font-serif text-[3.25rem] leading-[0.92] text-ink-strong sm:text-[4.6rem] lg:text-[5.5rem]">
-              Intention behind the polish.
-            </h1>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-muted sm:text-xl">
-              {studioInfo.name} was created to offer an alternative to loud, 
-              rushed beauty experiences. We believe treatments should feel restorative.
-            </p>
-          </div>
-        </Container>
-      </section>
+      <PageIntro
+        eyebrow="Studio story"
+        title="Intention behind the polish."
+        description={`${studioInfo.name} was created as an alternative to rushed, trend-led appointments. Treatments here are designed to feel restorative, warm, and carefully considered from the first consultation onward.`}
+      />
 
       <section className="section-space pt-0">
         <Container>
@@ -34,13 +25,14 @@ export default function AboutPage() {
             <div className="relative h-full min-h-[400px] w-full overflow-hidden rounded-[2.5rem]">
               <MediaFrame
                 aspect="portrait"
-                title="Salon Interior"
-                subtitle=""
+                title="Salon interior"
+                subtitle="Warm, layered, and intentionally calm."
+                label="Studio atmosphere"
                 tone="taupe"
                 className="h-full w-full"
               />
             </div>
-            
+
             <div className="space-y-8 pl-0 lg:pl-10">
               <SectionHeading
                 eyebrow="Our approach"
@@ -66,29 +58,31 @@ export default function AboutPage() {
 
       <section className="section-space bg-shell-soft">
         <Container>
-           <div className="mx-auto max-w-2xl text-center">
-              <SectionHeading
-                eyebrow="The environment"
-                title="Designed for calm."
-                description="Every element of our space is chosen to slow down your day and elevate your routine. A quiet atmosphere, signature scents, and private treatment rooms ensure focus remains entirely on you."
-              />
-           </div>
-           <div className="mt-12 grid gap-4 sm:grid-cols-2">
-              <MediaFrame
-                aspect="landscape"
-                title="Treatment Room"
-                subtitle=""
-                tone="blush"
-                className="h-[300px]"
-              />
-              <MediaFrame
-                aspect="landscape"
-                title="Consultation Area"
-                subtitle=""
-                tone="champagne"
-                className="h-[300px]"
-              />
-           </div>
+          <div className="mx-auto max-w-2xl text-center">
+            <SectionHeading
+              eyebrow="The environment"
+              title="Designed for calm."
+              description="Every element of our space is chosen to slow down your day and elevate your routine. A quiet atmosphere, signature scents, and private treatment rooms ensure focus remains entirely on you."
+            />
+          </div>
+          <div className="mt-12 grid gap-4 sm:grid-cols-2">
+            <MediaFrame
+              aspect="landscape"
+              title="Treatment room"
+              subtitle="Private, quiet, and light-filled."
+              label="Studio detail"
+              tone="blush"
+              className="h-[300px]"
+            />
+            <MediaFrame
+              aspect="landscape"
+              title="Consultation area"
+              subtitle="Designed for unhurried planning."
+              label="Studio detail"
+              tone="champagne"
+              className="h-[300px]"
+            />
+          </div>
         </Container>
       </section>
 
@@ -97,6 +91,10 @@ export default function AboutPage() {
         eyebrow="Visit us"
         title="Experience the studio."
         description="We look forward to welcoming you."
+        primaryHref="/contact"
+        primaryLabel="Plan your visit"
+        secondaryHref="/services"
+        secondaryLabel="Explore services"
       />
     </>
   );
