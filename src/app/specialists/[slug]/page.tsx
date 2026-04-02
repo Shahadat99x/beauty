@@ -68,13 +68,13 @@ export default function SpecialistDetailPage({
                </div>
                
                {specialist.bio && (
-                  <p className="mt-6 text-lg leading-8 text-muted">
+                  <p className="mt-8 text-lg leading-relaxed text-muted lg:text-xl">
                      {specialist.bio}
                   </p>
                )}
                
-               <div className="pt-6">
-                  <Button href="/contact" size="lg">Request {specialist.name.split(' ')[0]}</Button>
+               <div className="pt-8">
+                  <Button href="/contact" size="lg" className="px-10">Request {specialist.name.split(' ')[0]}</Button>
                </div>
              </div>
           </div>

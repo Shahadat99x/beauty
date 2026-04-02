@@ -132,14 +132,14 @@ export default function ServiceDetailPage({
                  description="Every phase of this treatment is purposefully designed to build upon the last, maximizing both efficacy and relaxation."
                />
                
-               <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+               <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                  {service.process.map((step, idx) => (
-                    <div key={idx} className="relative rounded-[2rem] bg-white p-6 shadow-sm">
-                       <span className="absolute -top-4 -left-4 flex h-10 w-10 items-center justify-center rounded-full bg-ink font-serif text-lg text-white">
+                    <div key={idx} className="group relative rounded-[2.5rem] bg-white p-8 shadow-[0_10px_30px_rgba(69,54,48,0.04)] transition-all hover:shadow-md">
+                       <span className="absolute -top-4 -left-4 flex h-12 w-12 items-center justify-center rounded-full bg-ink font-serif text-xl text-white shadow-lg">
                           {idx + 1}
                        </span>
-                       <h4 className="mt-2 font-serif text-xl text-ink-strong">{step.title}</h4>
-                       <p className="mt-3 text-sm leading-6 text-muted">{step.description}</p>
+                       <h4 className="mt-2 font-serif text-2xl text-ink-strong">{step.title}</h4>
+                       <p className="mt-4 text-sm leading-7 text-muted">{step.description}</p>
                     </div>
                  ))}
                </div>
