@@ -94,3 +94,9 @@ Phase R1: Repetitive trust and philosophy messaging should be consolidated into 
 
 ### D28
 Phase R1: Primary booking actions should route directly to `/contact` or `/services` instead of sending users deeper into another homepage CTA block, reducing friction and keeping conversion paths clearer.
+
+### D29
+Phase R2: The real-asset pass should use a small curated local image pack wired through the existing data model and shared media component, keeping the portfolio build stable and avoiding dependence on remote hotlinked assets.
+
+### D30
+Phase R2: Real photography should inherit the existing soft-luxury treatment through one shared `MediaFrame` pattern so overlays, crops, contrast, and responsive behavior stay consistent across hero, specialists, services, gallery, and journal content.

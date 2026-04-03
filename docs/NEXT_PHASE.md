@@ -1,30 +1,25 @@
 # NEXT_PHASE
 
 ## Active Next Phase
-Phase R2 - Real Asset Integration
+Phase R3 - Final Delivery Polish
 
 ## Goal
-Use the cleaner R1 homepage structure as the baseline for introducing real or higher-fidelity imagery, so the site feels less placeholder-led and more client-ready.
+Treat the site as visually complete and focus only on light final-pass work that improves confidence before portfolio presentation or handoff.
 
 ## Scope
-- replace the most visible homepage placeholder frames first:
-  - hero
-  - signature services
-  - specialists
-  - results
-  - gallery preview
-  - journal feature
-- refine image crops, aspect behavior, and visual balance without reopening the structural layout
-- keep copy adjustments light and only where real imagery creates a better storytelling opportunity
+- run a tighter accessibility review across navigation, buttons, cards, and image presentation
+- trim any obvious performance waste exposed by the new local imagery
+- make small crop, spacing, or copy adjustments only where real-device QA reveals a genuine issue
+- preserve the existing structure, component system, and Soft Luxury direction
 
 ## Acceptance Criteria
-- the homepage keeps the stronger R1 hierarchy intact
-- real imagery improves perceived quality without making mobile layouts feel crowded
-- services, specialists, results, journal, and testimonials remain visually distinct after asset integration
-- no new major features are introduced while the asset pass is underway
+- the site remains image-led, premium, and mobile-polished
+- no homepage structural churn is introduced after R1 and R2
+- the new visual asset treatment stays consistent across home, services, specialists, gallery, and journal
+- any further changes are minor delivery polish, not a new feature phase
 
 ## Do Not Do
-- do not reopen broad homepage structural changes unless real imagery exposes a genuine layout issue
+- do not reopen major design changes without a new scope
 - do not add backend, admin, auth, CMS, or database work
-- do not add new homepage sections or interactions by default
-- do not dilute the Soft Luxury direction during the asset pass
+- do not replace the curated image set with inconsistent or lower-quality visuals
+- do not expand the project beyond final frontend polish

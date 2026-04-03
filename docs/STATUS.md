@@ -24,8 +24,16 @@ Frontend-only premium beauty salon / beauty studio website with hardcoded conten
 - AI_RULES.md
 
 ## Current Build State
-Phase R1 completed.
-The homepage has been structurally refined so the hero carries more weight, repetitive trust and philosophy messaging has been consolidated, and the overall scroll now feels more premium and presentation-ready before real imagery is introduced.
+Phase R2 completed.
+The homepage and core visual touchpoints now use a controlled local image set, replacing the placeholder-heavy feel with a more polished, portfolio-ready visual presentation while preserving the R1 structure.
+
+## Completed In Phase R2
+- Added a curated local asset pack for the hero, specialist portraits, results details, product/editorial shots, and supporting gallery imagery.
+- Upgraded the shared `MediaFrame` component to render real photography through `next/image` while preserving the existing soft-luxury overlay treatment and stable responsive crops.
+- Extended the asset system into specialists, services, journal, gallery, and key detail pages so the site feels visually consistent instead of mixing real imagery with placeholder blocks.
+- Added real photography to the homepage hero, specialist showcase, before/after comparison area, featured journal story, and gallery previews.
+- Added specialist portraits and supporting portfolio imagery without reopening the site structure or introducing new features.
+- Kept images local to the repo for a more stable portfolio delivery baseline and cleaner crop control across mobile and desktop.
 
 ## Completed In Phase R1
 - Audited the homepage as a premium marketing page and removed the extra trust-strip density that was diluting the hero.
@@ -100,6 +108,7 @@ The homepage has been structurally refined so the hero carries more weight, repe
 5. Polish and portfolio cleanup (Done)
 6. Portfolio packaging and frontend hardening (Done)
 7. Homepage structural refinement before real assets (Done)
+8. Visual asset integration and responsive image polish (Done)
 
 ## Planned Main Pages
 - Home (Done)
@@ -116,7 +125,7 @@ The homepage has been structurally refined so the hero carries more weight, repe
 - Contact / Booking (Done)
 
 ## Immediate Next Goal
-Phase R2: replace the strongest remaining homepage placeholder frames with real or higher-fidelity imagery, then tune crops, image balance, and supporting copy around the cleaner R1 structure.
+Phase R3: optional final delivery polish focused on accessibility review, performance trimming, and any minor copy/image calibration exposed by real-device QA.
 
 ## Open Creative Direction
 Use soft luxury, not dark glam, not fashion-editorial-first, not medical beauty-tech.
