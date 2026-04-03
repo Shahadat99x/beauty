@@ -24,8 +24,16 @@ Frontend-only premium beauty salon / beauty studio website with hardcoded conten
 - AI_RULES.md
 
 ## Current Build State
-Phase 5 completed.
-The project is now packaged as a clean portfolio-ready frontend concept, with stronger repo presentation, metadata sanity, and a more business-facing copy tone across the site itself.
+Phase R1 completed.
+The homepage has been structurally refined so the hero carries more weight, repetitive trust and philosophy messaging has been consolidated, and the overall scroll now feels more premium and presentation-ready before real imagery is introduced.
+
+## Completed In Phase R1
+- Audited the homepage as a premium marketing page and removed the extra trust-strip density that was diluting the hero.
+- Reworked the homepage flow so Services, Studio Approach, Specialists, Results, Gallery, Testimonials, and Journal each carry a clearer role in the scroll.
+- Curated tighter homepage previews for services, specialists, gallery, and journal instead of showing every available content item at once.
+- Introduced stronger section-to-section contrast, including a darker results presentation and more distinct wrappers for services, testimonials, and the final CTA.
+- Reduced the sense of placeholder overload by simplifying supporting blocks and consolidating editorial messaging into fewer, stronger surfaces.
+- Updated homepage CTAs to route directly to `/contact` and `/services`, reducing unnecessary repeated call-to-action scrolling.
 
 ## Completed In Phase 5
 - Rewrote `README.md` to present the project clearly for portfolio review, including overview, highlights, page map, stack, scope, and local setup.
@@ -91,6 +99,7 @@ The project is now packaged as a clean portfolio-ready frontend concept, with st
 4. Rich content pages (Done)
 5. Polish and portfolio cleanup (Done)
 6. Portfolio packaging and frontend hardening (Done)
+7. Homepage structural refinement before real assets (Done)
 
 ## Planned Main Pages
 - Home (Done)
@@ -107,7 +116,7 @@ The project is now packaged as a clean portfolio-ready frontend concept, with st
 - Contact / Booking (Done)
 
 ## Immediate Next Goal
-No active build phase. The project is in a clean final delivery state and can be presented as-is, or selectively extended later with real photography, CMS integration, or production business wiring if a new scope is opened.
+Phase R2: replace the strongest remaining homepage placeholder frames with real or higher-fidelity imagery, then tune crops, image balance, and supporting copy around the cleaner R1 structure.
 
 ## Open Creative Direction
 Use soft luxury, not dark glam, not fashion-editorial-first, not medical beauty-tech.

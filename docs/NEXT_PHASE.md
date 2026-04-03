@@ -1,31 +1,30 @@
 # NEXT_PHASE
 
-## Post-Delivery Options
+## Active Next Phase
+Phase R2 - Real Asset Integration
 
 ## Goal
-The core frontend concept is complete. Any next work should be treated as optional extension scope rather than part of the current delivery.
+Use the cleaner R1 homepage structure as the baseline for introducing real or higher-fidelity imagery, so the site feels less placeholder-led and more client-ready.
 
 ## Scope
-Only proceed if a new phase is explicitly opened.
-Do not expand the current delivery by default.
-
-## Optional Directions
-1. Production content swap
-   - replace placeholder media with real photography
-   - refine copy against a real salon brief and brand voice
-
-2. CMS or booking integration
-   - introduce real content management or booking logic only if scope changes
-   - preserve the existing component and token system during any backend expansion
-
-3. Additional production hardening
-   - add deeper accessibility QA, analytics, localization, or deployment-specific refinements if required by a real client context
+- replace the most visible homepage placeholder frames first:
+  - hero
+  - signature services
+  - specialists
+  - results
+  - gallery preview
+  - journal feature
+- refine image crops, aspect behavior, and visual balance without reopening the structural layout
+- keep copy adjustments light and only where real imagery creates a better storytelling opportunity
 
 ## Acceptance Criteria
-- Any future work must have a clearly defined new scope
-- The current project remains stable, portfolio-ready, and frontend-first until that happens
+- the homepage keeps the stronger R1 hierarchy intact
+- real imagery improves perceived quality without making mobile layouts feel crowded
+- services, specialists, results, journal, and testimonials remain visually distinct after asset integration
+- no new major features are introduced while the asset pass is underway
 
 ## Do Not Do
-- do not reopen major design changes without a new phase
-- do not add backend, admin, auth, or database work by default
-- do not dilute the Soft Luxury direction during future adaptation
+- do not reopen broad homepage structural changes unless real imagery exposes a genuine layout issue
+- do not add backend, admin, auth, CMS, or database work
+- do not add new homepage sections or interactions by default
+- do not dilute the Soft Luxury direction during the asset pass

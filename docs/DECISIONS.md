@@ -85,3 +85,12 @@ Phase 5: The repository presentation should carry the portfolio framing, while t
 
 ### D25
 Phase 5: Added environment-aware metadata helpers plus generated `robots.txt`, `sitemap.xml`, and social image routes so the project has a cleaner delivery baseline without introducing backend complexity.
+
+### D26
+Phase R1: The homepage should prioritize a stronger hero and fewer, more curated previews instead of stacking every content type at full density, so the page reads like a premium narrative rather than a long template.
+
+### D27
+Phase R1: Repetitive trust and philosophy messaging should be consolidated into fewer, higher-value sections, with stronger section contrast used to distinguish services, results, testimonials, and journal content.
+
+### D28
+Phase R1: Primary booking actions should route directly to `/contact` or `/services` instead of sending users deeper into another homepage CTA block, reducing friction and keeping conversion paths clearer.
