@@ -11,14 +11,17 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
         <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-muted">
           {testimonial.service}
         </p>
-        <p className="text-sm text-accent-strong" aria-label={`${testimonial.rating} stars`}>
+        <p
+          className="rounded-full border border-border/70 bg-white/78 px-3 py-1.5 text-sm text-accent-strong shadow-[0_8px_18px_rgba(69,54,48,0.06)]"
+          aria-label={`${testimonial.rating} stars`}
+        >
           {"★".repeat(testimonial.rating)}
         </p>
       </div>
-      <p className="mt-5 font-serif text-[2.15rem] leading-[1.08] text-ink-strong sm:text-[2.35rem]">
+      <p className="mt-5 font-serif text-[2.05rem] leading-[1.08] text-ink-strong sm:text-[2.3rem]">
         “{testimonial.quote}”
       </p>
-      <div className="mt-6 border-t border-border/70 pt-4">
+      <div className="mt-auto border-t border-border/70 pt-5">
         <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-muted">
           {testimonial.result}
         </p>

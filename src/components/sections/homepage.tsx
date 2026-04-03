@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import { TestimonialCard } from "@/components/cards/testimonial-card";
 import { CtaBlock } from "@/components/sections/cta-block";
 import { Badge } from "@/components/ui/badge";
@@ -251,7 +252,7 @@ export function Homepage() {
 
             <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {featuredSpecialists.map((specialist) => (
-                <article key={specialist.slug} className="group">
+                <article key={specialist.slug} className="group flex h-full flex-col">
                   <MediaFrame
                     aspect="portrait"
                     title={specialist.name}
@@ -263,7 +264,7 @@ export function Homepage() {
                     overlayClassName="max-w-[10rem] border-white/55 bg-white/48 p-3 sm:max-w-[11rem] sm:p-3.5"
                   />
 
-                  <div className="space-y-4 px-1 pb-1 pt-4">
+                  <div className="flex flex-1 flex-col space-y-4 px-1 pb-1 pt-4">
                     <div className="space-y-2">
                       <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted">
                         {specialist.experience}
@@ -284,7 +285,7 @@ export function Homepage() {
                       ))}
                     </div>
 
-                    <div>
+                    <div className="mt-auto border-t border-border/70 pt-4">
                       <Button
                         href={`/specialists/${specialist.slug}`}
                         variant="ghost"
@@ -392,7 +393,7 @@ export function Homepage() {
       <section className="section-space-tight overflow-hidden">
         <Container>
           <div className="grid gap-6 lg:grid-cols-[0.58fr_1.42fr] lg:items-end">
-            <div className="space-y-4">
+            <div className="max-w-md space-y-4">
               <Badge variant="outline">Client words</Badge>
               <h2 className="text-balance font-serif text-[2.2rem] leading-[0.98] text-ink-strong sm:text-[2.8rem] lg:text-[3.35rem]">
                 Tighter proof, lighter section.
@@ -425,7 +426,7 @@ export function Homepage() {
               href={`/journal/${featuredJournalPost.slug}`}
               className="group block"
             >
-              <article className="surface-card overflow-hidden rounded-[2.5rem] p-4 sm:p-5">
+              <article className="surface-card overflow-hidden rounded-[2.5rem] p-4 transition-[transform,box-shadow,border-color] duration-500 ease-out group-hover:-translate-y-1 group-hover:border-border-strong/70 group-hover:shadow-[var(--shadow-card-hover)] sm:p-5">
                 <MediaFrame
                   aspect="landscape"
                   title={featuredJournalPost.title}
@@ -442,8 +443,9 @@ export function Homepage() {
                     <span className="h-1 w-1 rounded-full bg-border-strong" />
                     <span>{featuredJournalPost.readTime}</span>
                   </div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.22em] text-ink">
+                  <p className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-white/76 px-4 py-2 text-sm font-semibold uppercase tracking-[0.22em] text-ink shadow-[0_10px_24px_rgba(69,54,48,0.08)] transition-[transform,box-shadow] duration-300 group-hover:translate-x-1 group-hover:shadow-[0_14px_30px_rgba(69,54,48,0.12)]">
                     Read featured article
+                    <ArrowRight className="h-4 w-4" />
                   </p>
                 </div>
               </article>
@@ -465,7 +467,7 @@ export function Homepage() {
                   <Link
                     key={post.slug}
                     href={`/journal/${post.slug}`}
-                    className="group block px-5 py-4 transition-colors duration-300 hover:bg-white/76"
+                    className="group block px-5 py-4 transition-colors duration-300 hover:bg-white/84"
                   >
                     <div
                       className={
@@ -501,6 +503,10 @@ export function Homepage() {
                           <h3 className="mt-3 font-serif text-[1.85rem] leading-[0.98] text-ink-strong transition-colors duration-300 group-hover:text-ink">
                             {post.title}
                           </h3>
+                          <p className="mt-3 inline-flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-ink/76 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-ink">
+                            Read article
+                            <ArrowRight className="h-3.5 w-3.5" />
+                          </p>
                         </div>
                       </div>
                     </div>
