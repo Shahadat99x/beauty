@@ -7,7 +7,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 
 export const metadata = {
   title: "Pricing & Memberships | Maison de Lueur",
-  description: "Transparent, premium pricing for our soft luxury beauty rituals.",
+  description: "Explore Maison de Lueur pricing, treatment investment, and memberships for ongoing soft luxury care.",
 };
 
 export default function PricingPage() {

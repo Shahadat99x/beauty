@@ -15,9 +15,9 @@ export function SiteFooter() {
                   {studioInfo.shortName}
                 </p>
                 <p className="mt-3 max-w-lg text-base leading-8 text-muted">
-                  {studioInfo.tagline} The current experience is intentionally
-                  frontend-only, with calm navigation, editorial pacing, and
-                  service-led storytelling designed to feel presentation-ready.
+                  {studioInfo.tagline} Calm appointments, tailored treatment
+                  plans, and refined results are at the heart of every visit to
+                  the studio.
                 </p>
               </div>
               <div className="flex flex-wrap gap-3">
@@ -75,7 +75,7 @@ export function SiteFooter() {
           </div>
 
           <div className="mt-10 flex flex-col gap-4 border-t border-border/70 pt-6 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
-            <p>© 2026 {studioInfo.shortName}. Built as a premium frontend-only concept.</p>
+            <p>© 2026 {studioInfo.shortName}. Soft luxury beauty rituals in Vilnius.</p>
             <div className="flex flex-wrap gap-4">
               {studioInfo.socialLinks.map((link) => (
                 <Link

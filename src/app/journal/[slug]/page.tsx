@@ -22,7 +22,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${post.title} | Maison de Lueur Journal`,
+    title: `${post.title} | Maison de Lueur`,
     description: post.excerpt,
   };
 }

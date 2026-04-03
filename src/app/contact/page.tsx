@@ -6,7 +6,7 @@ import { PageIntro } from "@/components/ui/page-intro";
 
 export const metadata = {
   title: "Contact | Maison de Lueur",
-  description: "Get in touch or book an appointment at our studio.",
+  description: "Get in touch with Maison de Lueur to request a consultation, ask a question, or plan your next studio visit.",
 };
 
 export default function ContactPage() {

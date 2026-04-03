@@ -7,7 +7,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 
 export const metadata = {
   title: "About | Maison de Lueur",
-  description: "Our philosophy and commitment to calm, polished beauty.",
+  description: "Discover the studio philosophy, calm environment, and soft luxury approach behind Maison de Lueur.",
 };
 
 export default function AboutPage() {

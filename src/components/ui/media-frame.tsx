@@ -29,7 +29,7 @@ const aspectClasses: Record<MediaAspect, string> = {
 export function MediaFrame({
   title,
   subtitle,
-  label = "Editorial placeholder",
+  label = "Maison de Lueur",
   tone = "champagne",
   aspect = "portrait",
   className,

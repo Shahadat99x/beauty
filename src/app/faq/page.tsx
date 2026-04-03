@@ -6,7 +6,7 @@ import { PageIntro } from "@/components/ui/page-intro";
 
 export const metadata = {
   title: "FAQ | Maison de Lueur",
-  description: "Common questions about our rituals, studio policies, and skin philosophy.",
+  description: "Read common questions about appointments, treatment prep, aftercare, and the Maison de Lueur studio experience.",
 };
 
 export default function FaqPage() {

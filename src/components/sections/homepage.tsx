@@ -78,7 +78,7 @@ export function Homepage() {
               <MediaFrame
                 aspect="hero"
                 title="Editorial calm, salon warmth"
-                subtitle="Tasteful placeholder visuals hold the composition now and can be replaced with real photography later without changing the layout system."
+                subtitle="Soft morning light, warm textures, and a quiet atmosphere set the tone for every appointment."
                 tone="champagne"
                 className="min-h-[460px] rounded-[2.5rem] sm:min-h-[560px]"
                 overlayClassName="max-w-[18rem]"
@@ -115,8 +115,8 @@ export function Homepage() {
                   Trusted studio experience
                 </p>
                 <p className="mt-3 max-w-xl font-serif text-3xl leading-tight text-ink-strong sm:text-4xl">
-                  A premium local beauty concept that already feels credible on
-                  mobile, tablet, and desktop.
+                  Every visit is designed to feel personal, polished, and
+                  quietly luxurious.
                 </p>
               </div>
               <div className="grid gap-4 sm:grid-cols-3">
@@ -210,7 +210,7 @@ export function Homepage() {
                 <MediaFrame
                   aspect="square"
                   title="Tailored plans"
-                  subtitle="Structured consultation points support future CMS and booking upgrades."
+                  subtitle="Consult-led rituals shaped around your features, skin condition, and maintenance rhythm."
                   tone="taupe"
                 />
                 <div className="surface-card rounded-[2rem] p-5">
@@ -355,7 +355,7 @@ export function Homepage() {
             <SectionHeading
               eyebrow="Beauty journal"
               title="Editorial blog cards give the brand a more complete, sellable feel."
-              description="The journal extends the brand beyond treatments, giving the studio a thoughtful editorial voice and a stronger portfolio-ready finish."
+              description="The journal extends the brand beyond treatments, giving the studio a thoughtful editorial voice rooted in calm, practical beauty guidance."
             />
 
             <div className="grid gap-6 lg:grid-cols-3">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { SiteShell } from "@/components/layout/site-shell";
+import { absoluteUrl, siteDescription, siteName, siteTitle, siteUrl } from "@/lib/seo";
 import "./globals.css";
 
 const headingFont = Cormorant_Garamond({
@@ -15,9 +16,47 @@ const bodyFont = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Maison de Lueur | Soft Luxury Beauty Studio",
-  description:
-    "A premium soft luxury beauty studio concept with signature treatments, refined specialists, and an editorial frontend experience.",
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
+  applicationName: siteName,
+  keywords: [
+    "beauty studio website",
+    "soft luxury salon",
+    "beauty salon concept",
+    "premium beauty website",
+    "frontend portfolio project",
+    "beauty business website",
+  ],
+  category: "beauty",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: siteTitle,
+    description: siteDescription,
+    url: "/",
+    siteName,
+    type: "website",
+    images: [
+      {
+        url: absoluteUrl("/opengraph-image"),
+        width: 1200,
+        height: 630,
+        alt: "Maison de Lueur soft luxury beauty studio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    images: [absoluteUrl("/twitter-image")],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

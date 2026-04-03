@@ -6,7 +6,7 @@ import { PageIntro } from "@/components/ui/page-intro";
 
 export const metadata = {
   title: "Specialists | Maison de Lueur",
-  description: "Meet our resident experts in soft luxury beauty.",
+  description: "Meet the Maison de Lueur specialists behind the studio's calm, polished beauty rituals.",
 };
 
 export default function SpecialistsPage() {

@@ -6,7 +6,7 @@ import { PageIntro } from "@/components/ui/page-intro";
 
 export const metadata = {
   title: "Gallery | Maison de Lueur",
-  description: "A curated visual portfolio of our soft luxury beauty rituals.",
+  description: "Browse the Maison de Lueur gallery for client results, studio atmosphere, and softly curated beauty imagery.",
 };
 
 export default function GalleryPage() {
@@ -15,13 +15,13 @@ export default function GalleryPage() {
       <PageIntro
         eyebrow="Portfolio"
         title="The visual diary."
-        description="A curated selection of client results, treatment moods, and quiet studio details arranged to feel soft, polished, and presentation-ready on every screen."
+        description="A curated selection of client results, treatment moods, and quiet studio details arranged to feel soft, polished, and editorial."
       >
         <div className="grid gap-3 sm:grid-cols-3">
           {[
             "Results-led polish",
             "Calm studio atmosphere",
-            "Editorial portfolio rhythm",
+            "Editorial gallery rhythm",
           ].map((item) => (
             <div
               key={item}

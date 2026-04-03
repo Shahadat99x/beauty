@@ -6,7 +6,7 @@ import { PageIntro } from "@/components/ui/page-intro";
 
 export const metadata = {
   title: "Services | Maison de Lueur",
-  description: "Explore our signature beauty rituals.",
+  description: "Explore Maison de Lueur signature services, from skin rituals to brow and lash refinement.",
 };
 
 export default function ServicesPage() {

@@ -8,7 +8,7 @@ import { PageIntro } from "@/components/ui/page-intro";
 
 export const metadata = {
   title: "Journal | Maison de Lueur",
-  description: "Editorial insights, studio news, and slow beauty philosophy.",
+  description: "Read editorial notes, treatment guidance, and slow beauty insight from Maison de Lueur.",
 };
 
 export default function JournalPage() {
