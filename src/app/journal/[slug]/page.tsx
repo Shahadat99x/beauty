@@ -66,6 +66,7 @@ export default async function JournalDetailPage({
                 title={post.title}
                 subtitle="Editorial"
                 label="Journal feature"
+                image={post.image}
                 className="h-full w-full"
               />
             </div>

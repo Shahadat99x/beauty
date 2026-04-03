@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { TestimonialCard } from "@/components/cards/testimonial-card";
 import { CtaBlock } from "@/components/sections/cta-block";
 import { Badge } from "@/components/ui/badge";
@@ -473,14 +474,35 @@ export function Homepage() {
                           : ""
                       }
                     >
-                      <div className="flex flex-wrap items-center gap-3 text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-muted">
-                        <span>{post.category}</span>
-                        <span className="h-1 w-1 rounded-full bg-border-strong" />
-                        <span>{post.readTime}</span>
+                      <div className="grid grid-cols-[5rem_1fr] items-center gap-4 sm:grid-cols-[6.5rem_1fr]">
+                        <div className="relative aspect-[4/5] overflow-hidden rounded-[1.4rem] border border-white/70 bg-shell-soft">
+                          {post.image ? (
+                            <Image
+                              src={post.image.src}
+                              alt={post.image.alt}
+                              fill
+                              sizes="(min-width: 640px) 6.5rem, 5rem"
+                              className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                              style={{
+                                objectPosition:
+                                  post.image.position ?? "center",
+                              }}
+                            />
+                          ) : null}
+                          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.06)_0%,rgba(35,25,21,0.14)_100%)]" />
+                        </div>
+
+                        <div>
+                          <div className="flex flex-wrap items-center gap-3 text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-muted">
+                            <span>{post.category}</span>
+                            <span className="h-1 w-1 rounded-full bg-border-strong" />
+                            <span>{post.readTime}</span>
+                          </div>
+                          <h3 className="mt-3 font-serif text-[1.85rem] leading-[0.98] text-ink-strong transition-colors duration-300 group-hover:text-ink">
+                            {post.title}
+                          </h3>
+                        </div>
                       </div>
-                      <h3 className="mt-3 font-serif text-[1.85rem] leading-[0.98] text-ink-strong transition-colors duration-300 group-hover:text-ink">
-                        {post.title}
-                      </h3>
                     </div>
                   </Link>
                 ))}

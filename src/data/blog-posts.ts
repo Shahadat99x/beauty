@@ -11,7 +11,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "March 2026",
     readTime: "4 min read",
     imageTone: "champagne",
-    image: beautyMedia.heroSpa,
+    image: beautyMedia.ritualTreatment,
     contentBlocks: [
       {
         type: "paragraph",
@@ -91,7 +91,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "January 2026",
     readTime: "5 min read",
     imageTone: "blush",
-    image: beautyMedia.productFlatlay,
+    image: beautyMedia.productSerumDropper,
     contentBlocks: [
       {
         type: "paragraph",
