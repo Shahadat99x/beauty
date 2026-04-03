@@ -44,7 +44,7 @@ export function SiteHeader() {
             </nav>
 
             <div className="hidden lg:flex">
-              <Button href="#contact" variant="primary">
+              <Button href="/contact" variant="primary">
                 Book a calm visit
               </Button>
             </div>
@@ -101,7 +101,7 @@ export function SiteHeader() {
                   {item.label}
                 </Link>
               ))}
-              <Button href="#contact" className="mt-2" fullWidth>
+              <Button href="/contact" className="mt-2" fullWidth>
                 Book a calm visit
               </Button>
             </nav>
