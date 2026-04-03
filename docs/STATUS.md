@@ -24,8 +24,15 @@ Frontend-only premium beauty salon / beauty studio website with hardcoded conten
 - AI_RULES.md
 
 ## Current Build State
-Phase R2B completed.
-The key missing homepage and preview imagery has been completed with a small supplemental local asset set, giving results, specialists, services, and journal surfaces a more consistent, portfolio-ready visual finish without reopening the homepage structure again.
+Phase R2C completed.
+The homepage and its key preview sections have received a final visibility and interaction pass, making buttons, slider controls, CTA surfaces, and preview actions clearer and more usable while preserving the existing soft-luxury structure.
+
+## Completed In Phase R2C
+- Strengthened button visibility across the homepage and shared CTA surfaces by improving contrast, shadow definition, focus treatment, and touch comfort without making the UI feel heavy.
+- Enlarged and clarified carousel arrow controls and the before/after comparison handle so slider interactions read faster and feel easier to use on both desktop and mobile.
+- Tightened homepage specialist, testimonial, and journal action areas so card alignment feels more anchored and interactions look intentional instead of decorative.
+- Improved journal preview action cues and featured article feedback so editorial cards feel more obviously clickable while remaining refined.
+- Revalidated the full frontend after the interaction polish pass to ensure no responsive or build regressions were introduced.
 
 ## Completed In Phase R2B
 - Added a small supplemental set of local imagery for specialist, ritual, and product coverage so the asset pack feels more complete without becoming noisy or inconsistent.
@@ -127,6 +134,7 @@ The key missing homepage and preview imagery has been completed with a small sup
 8. Visual asset integration and responsive image polish (Done)
 9. Homepage layout cleanup after asset integration (Done)
 10. Missing asset completion and preview consistency (Done)
+11. Visibility and interaction polish before final presentation (Done)
 
 ## Planned Main Pages
 - Home (Done)

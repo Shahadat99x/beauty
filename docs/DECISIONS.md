@@ -112,3 +112,9 @@ Phase R2B: Remaining asset work should use only a few supplemental local images,
 
 ### D34
 Phase R2B: Once the site is largely image-led, journal content should surface real cover imagery both in the article hero and in compact homepage preview thumbnails instead of leaving secondary editorial links text-only.
+
+### D35
+Phase R2C: The final homepage polish should prioritize clearer action visibility through stronger shared button contrast, larger slider hit areas, and more explicit CTA affordances before considering any further visual changes.
+
+### D36
+Phase R2C: Interaction polish should stay structural-light, using spacing, anchored action rows, and subtle hover motion to improve usability rather than introducing new modules or louder visual treatments.
