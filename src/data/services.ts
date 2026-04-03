@@ -90,7 +90,7 @@ export const services: Service[] = [
     priceFrom: "From €130",
     highlight: "A calm, camera-ready beauty plan.",
     imageTone: "pearl",
-    image: beautyMedia.portraitSofia,
+    image: beautyMedia.portraitEditorialSoft,
     overview: "Preparing for a wedding should feel calming, not chaotic. The Bridal Preview Glow is a comprehensive consultation and initial treatment session where we assess your skin, refine your brows, and create a tailored roadmap counting down to your big day.",
     benefits: [
       "Personalized skincare timeline for the months leading up",
@@ -142,7 +142,7 @@ export const services: Service[] = [
     priceFrom: "From €75",
     highlight: "Visibly sculpted, rested appearance.",
     imageTone: "blush",
-    image: beautyMedia.heroSpa,
+    image: beautyMedia.ritualTreatment,
     overview: "More than just relaxation, this treatment is a workout for the facial muscles. Using a blend of deep tissue release, lymphatic drainage, and intra-oral techniques (optional), we melt away jaw tension, sculpt the cheekbones, and drain fluid retention, resulting in an instantly lifted, contoured appearance.",
     benefits: [
       "Relieves jaw tension and TMJ discomfort",
@@ -167,7 +167,7 @@ export const services: Service[] = [
     priceFrom: "From €125",
     highlight: "Uniform, luminous, and deeply oxygenated skin.",
     imageTone: "champagne",
-    image: beautyMedia.productSerum,
+    image: beautyMedia.productSerumDropper,
     overview: "Designed for those seeking an immediate correction in tone and texture. This ritual combines vitamin-rich oxygen infusions with advanced massage to brighten dullness and even out sun damage. Perfect for post-holiday recovery or season changes.",
     benefits: [
       "Fades the appearance of age spots and redness",

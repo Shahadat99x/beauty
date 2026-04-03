@@ -8,7 +8,7 @@ export const galleryItems: GalleryItem[] = [
     service: "Facial ritual result",
     imageTone: "champagne",
     aspect: "landscape",
-    image: beautyMedia.heroSpa,
+    image: beautyMedia.ritualTreatment,
   },
   {
     slug: "defined-brow-balance",
@@ -24,7 +24,7 @@ export const galleryItems: GalleryItem[] = [
     service: "Bridal preview",
     imageTone: "blush",
     aspect: "square",
-    image: beautyMedia.portraitSofia,
+    image: beautyMedia.portraitEditorialSoft,
   },
   {
     slug: "lash-lift-detail",
@@ -64,6 +64,6 @@ export const galleryItems: GalleryItem[] = [
     service: "Brightening glow",
     imageTone: "pearl",
     aspect: "portrait",
-    image: beautyMedia.productSerum,
+    image: beautyMedia.productSerumDropper,
   },
 ];

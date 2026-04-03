@@ -26,6 +26,16 @@ export const beautyMedia: Record<string, MediaImage> = {
     alt: "Warm studio portrait of a brunette woman with clean skin and subtle eyeliner.",
     position: "center 22%",
   },
+  portraitEditorialSoft: {
+    src: "/images/beauty/portrait-editorial-soft.jpg",
+    alt: "Editorial close portrait of a woman with softly defined brows, luminous skin, and natural makeup against a pale studio backdrop.",
+    position: "center 24%",
+  },
+  portraitWarmNeutral: {
+    src: "/images/beauty/portrait-warm-neutral.jpg",
+    alt: "Warm portrait of a woman with softly styled hair against a sunlit neutral wall.",
+    position: "center 24%",
+  },
   detailLash: {
     src: "/images/beauty/detail-lash.jpg",
     alt: "Macro beauty detail showing softly lifted lashes and refined brow structure.",
@@ -46,9 +56,19 @@ export const beautyMedia: Record<string, MediaImage> = {
     alt: "Editorial amber serum bottle on a warm beige surface with delicate florals.",
     position: "center center",
   },
+  productSerumDropper: {
+    src: "/images/beauty/product-serum-dropper.jpg",
+    alt: "Minimal amber serum bottle styled on textured linen in soft natural light.",
+    position: "center 58%",
+  },
   productFlatlay: {
     src: "/images/beauty/product-flatlay.jpg",
     alt: "Editorial tabletop skincare flat lay with treatment oil, serum, and soft linens.",
     position: "center center",
+  },
+  ritualTreatment: {
+    src: "/images/beauty/ritual-treatment.jpg",
+    alt: "Overhead view of a client resting on a treatment bed during a calming facial ritual.",
+    position: "center 46%",
   },
 };

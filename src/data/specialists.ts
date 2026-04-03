@@ -73,8 +73,14 @@ export const specialists: Specialist[] = [
         title: "Polished Occasion Look",
         aspect: "portrait",
         tone: "blush",
-        image: beautyMedia.portraitSofia,
-      }
+        image: beautyMedia.portraitWarmNeutral,
+      },
+      {
+        title: "Bridal Preview Glow",
+        aspect: "square",
+        tone: "pearl",
+        image: beautyMedia.portraitEditorialSoft,
+      },
     ]
   },
   {
@@ -85,7 +91,7 @@ export const specialists: Specialist[] = [
     quote: "True glow comes from deep nourishment and precise technique.",
     specialties: ["Cellular renewal", "Texture mapping", "Pigment correction"],
     imageTone: "pearl",
-    image: beautyMedia.portraitMonika,
+    image: beautyMedia.portraitWarmNeutral,
     bio: "Monika specializes in transforming dull, congested, or uneven skin. Combining a deep understanding of cosmetic chemistry with an incredibly soothing touch, she tailors active peels and resurfacing treatments to be effective without unnecessary downtime. Her goal is to give every client back their confidence without irritation, building a journey towards resilient, healthy skin.",
     signatureServices: ["radiance-facial", "cellular-renewal", "restorative-massage", "lueur-brightening-glow"],
     recentWorkImages: [
