@@ -48,6 +48,7 @@ export default function GalleryPage() {
                     title={item.title}
                     subtitle={item.service}
                     label="Portfolio frame"
+                    image={item.image}
                     className="w-full"
                   />
                 </div>

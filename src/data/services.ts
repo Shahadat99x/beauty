@@ -1,4 +1,5 @@
 import type { Service } from "@/lib/types";
+import { beautyMedia } from "@/data/media";
 
 export const services: Service[] = [
   {
@@ -11,6 +12,7 @@ export const services: Service[] = [
     priceFrom: "From €92",
     highlight: "Plump, luminous skin with zero downtime.",
     imageTone: "champagne",
+    image: beautyMedia.heroSpa,
     overview: "Our signature facial is designed to reset the skin's moisture barrier while instantly improving texture and tone. Using a combination of gentle enzyme exfoliation, active hydration serums, and lifting massage techniques, this treatment restores natural radiance. It is the perfect choice before a special event or whenever your skin feels fatigued and lackluster.",
     benefits: [
       "Deeply hydrates and plumps fine lines",
@@ -36,6 +38,7 @@ export const services: Service[] = [
     priceFrom: "From €48",
     highlight: "Balanced definition without harsh edges.",
     imageTone: "taupe",
+    image: beautyMedia.detailLash,
     overview: "This is not a standard wax and tint. The Signature Brow Sculpt focuses on structural balance, restoring sparse areas, and creating a soft, feathered look. We map your brows according to your bone structure rather than trends, ensuring a sophisticated arch that enhances your natural beauty.",
     benefits: [
       "Custom color mixing for the perfect tint",
@@ -61,6 +64,7 @@ export const services: Service[] = [
     priceFrom: "From €64",
     highlight: "Glossy lift with low-maintenance wear.",
     imageTone: "blush",
+    image: beautyMedia.detailLash,
     overview: "The Lash Lift Veil is a restorative treatment that curls and darkens your natural lashes. Instead of a dramatic, harsh bend, we create a soft, swooping 'veil' effect that opens up the eyes and makes lashes look significantly longer and thicker without the need for extensions.",
     benefits: [
       "Effortlessly awake appearance",
@@ -86,6 +90,7 @@ export const services: Service[] = [
     priceFrom: "From €130",
     highlight: "A calm, camera-ready beauty plan.",
     imageTone: "pearl",
+    image: beautyMedia.portraitSofia,
     overview: "Preparing for a wedding should feel calming, not chaotic. The Bridal Preview Glow is a comprehensive consultation and initial treatment session where we assess your skin, refine your brows, and create a tailored roadmap counting down to your big day.",
     benefits: [
       "Personalized skincare timeline for the months leading up",
@@ -111,6 +116,7 @@ export const services: Service[] = [
     priceFrom: "From €110",
     highlight: "Instantly smoother, brighter texture.",
     imageTone: "mocha",
+    image: beautyMedia.detailSkinTexture,
     overview: "This advanced peel accelerates cell turnover without the aggressive downtime of traditional chemical peels. It is carefully layered to target uneven texture, congestion, and hyperpigmentation, encouraging your skin to shed its dull outer layers and reveal a remarkably refined, luminous complexion underneath.",
     benefits: [
       "Fades hyperpigmentation and sun damage",
@@ -136,6 +142,7 @@ export const services: Service[] = [
     priceFrom: "From €75",
     highlight: "Visibly sculpted, rested appearance.",
     imageTone: "blush",
+    image: beautyMedia.heroSpa,
     overview: "More than just relaxation, this treatment is a workout for the facial muscles. Using a blend of deep tissue release, lymphatic drainage, and intra-oral techniques (optional), we melt away jaw tension, sculpt the cheekbones, and drain fluid retention, resulting in an instantly lifted, contoured appearance.",
     benefits: [
       "Relieves jaw tension and TMJ discomfort",
@@ -160,6 +167,7 @@ export const services: Service[] = [
     priceFrom: "From €125",
     highlight: "Uniform, luminous, and deeply oxygenated skin.",
     imageTone: "champagne",
+    image: beautyMedia.productSerum,
     overview: "Designed for those seeking an immediate correction in tone and texture. This ritual combines vitamin-rich oxygen infusions with advanced massage to brighten dullness and even out sun damage. Perfect for post-holiday recovery or season changes.",
     benefits: [
       "Fades the appearance of age spots and redness",
@@ -184,6 +192,7 @@ export const services: Service[] = [
     priceFrom: "From €55",
     highlight: "A lifted, wide-awake effect for the entire upper face.",
     imageTone: "taupe",
+    image: beautyMedia.detailLash,
     overview: "This specialized ritual focuses entirely on the architecture of the eyes. We combine a micro-lifting massage using cold stones with precision brow shaping and a lash tint to harmonize and lift your gaze naturally.",
     benefits: [
       "Visibly reduces under-eye puffiness",

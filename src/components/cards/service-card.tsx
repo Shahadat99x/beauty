@@ -16,6 +16,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
         subtitle={service.highlight}
         label={service.category}
         tone={service.imageTone}
+        image={service.image}
         className="rounded-[1.6rem]"
       />
       <div className="flex flex-1 flex-col gap-5 px-2 pb-2 pt-6">

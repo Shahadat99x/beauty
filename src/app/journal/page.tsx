@@ -35,6 +35,7 @@ export default function JournalPage() {
                     title={featuredPost.title}
                     subtitle="Featured edit"
                     label="Featured story"
+                    image={featuredPost.image}
                     className="h-full w-full transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>

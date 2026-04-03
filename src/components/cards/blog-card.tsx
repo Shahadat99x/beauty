@@ -15,6 +15,7 @@ export function BlogCard({ post }: BlogCardProps) {
         subtitle={post.title}
         label={post.category}
         tone={post.imageTone}
+        image={post.image}
         className="rounded-[1.6rem]"
       />
       <div className="flex flex-1 flex-col gap-4 px-2 pb-2 pt-6">

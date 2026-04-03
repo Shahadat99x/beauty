@@ -1,4 +1,5 @@
 import type { GalleryItem } from "@/lib/types";
+import { beautyMedia } from "@/data/media";
 
 export const galleryItems: GalleryItem[] = [
   {
@@ -7,6 +8,7 @@ export const galleryItems: GalleryItem[] = [
     service: "Facial ritual result",
     imageTone: "champagne",
     aspect: "landscape",
+    image: beautyMedia.heroSpa,
   },
   {
     slug: "defined-brow-balance",
@@ -14,6 +16,7 @@ export const galleryItems: GalleryItem[] = [
     service: "Brow sculpt result",
     imageTone: "taupe",
     aspect: "portrait",
+    image: beautyMedia.detailLash,
   },
   {
     slug: "bridal-prep-glow",
@@ -21,6 +24,7 @@ export const galleryItems: GalleryItem[] = [
     service: "Bridal preview",
     imageTone: "blush",
     aspect: "square",
+    image: beautyMedia.portraitSofia,
   },
   {
     slug: "lash-lift-detail",
@@ -28,6 +32,7 @@ export const galleryItems: GalleryItem[] = [
     service: "Lash veil",
     imageTone: "pearl",
     aspect: "portrait",
+    image: beautyMedia.detailSkinTexture,
   },
   {
     slug: "studio-space-calm",
@@ -35,6 +40,7 @@ export const galleryItems: GalleryItem[] = [
     service: "Our environment",
     imageTone: "mocha",
     aspect: "landscape",
+    image: beautyMedia.productFlatlay,
   },
   {
     slug: "texture-refinement",
@@ -42,6 +48,7 @@ export const galleryItems: GalleryItem[] = [
     service: "Cellular renewal peel",
     imageTone: "champagne",
     aspect: "portrait",
+    image: beautyMedia.detailMaskProcess,
   },
   {
     slug: "signature-massage-sculpt",
@@ -49,6 +56,7 @@ export const galleryItems: GalleryItem[] = [
     service: "Restorative facial massage",
     imageTone: "blush",
     aspect: "square",
+    image: beautyMedia.heroSpa,
   },
   {
     slug: "the-lueur-brightening",
@@ -56,5 +64,6 @@ export const galleryItems: GalleryItem[] = [
     service: "Brightening glow",
     imageTone: "pearl",
     aspect: "portrait",
+    image: beautyMedia.productSerum,
   },
 ];

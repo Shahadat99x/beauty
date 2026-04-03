@@ -1,4 +1,5 @@
 import type { BlogPost } from "@/lib/types";
+import { beautyMedia } from "@/data/media";
 
 export const blogPosts: BlogPost[] = [
   {
@@ -10,6 +11,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "March 2026",
     readTime: "4 min read",
     imageTone: "champagne",
+    image: beautyMedia.heroSpa,
     contentBlocks: [
       {
         type: "paragraph",
@@ -56,6 +58,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "February 2026",
     readTime: "3 min read",
     imageTone: "taupe",
+    image: beautyMedia.detailLash,
     contentBlocks: [
       {
         type: "paragraph",
@@ -88,6 +91,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "January 2026",
     readTime: "5 min read",
     imageTone: "blush",
+    image: beautyMedia.productFlatlay,
     contentBlocks: [
       {
         type: "paragraph",

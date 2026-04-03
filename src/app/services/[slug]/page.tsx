@@ -90,6 +90,7 @@ export default async function ServiceDetailPage({
                 subtitle="Signature ritual"
                 label="Treatment portrait"
                 tone={service.imageTone}
+                image={service.image}
                 className="h-full w-full"
               />
             </div>
