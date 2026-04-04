@@ -24,8 +24,15 @@ Frontend-only premium beauty salon / beauty studio website with hardcoded conten
 - AI_RULES.md
 
 ## Current Build State
-Phase R2C completed.
-The homepage and its key preview sections have received a final visibility and interaction pass, making buttons, slider controls, CTA surfaces, and preview actions clearer and more usable while preserving the existing soft-luxury structure.
+Phase R2D completed.
+The full site has received a responsive audit and hardening pass across shared components and major pages, improving stability, spacing, image behavior, and mobile-to-desktop presentation consistency without reopening scope.
+
+## Completed In Phase R2D
+- Audited the homepage, archive pages, detail pages, pricing/FAQ surfaces, contact flow, gallery, navbar, footer, and shared cards for mobile, tablet, small-laptop, and desktop layout issues.
+- Hardened shared responsive primitives by tightening global overflow protection, reducing heading and card-title pressure on small screens, allowing CTA/button labels to wrap cleanly, and softening badge/meta spacing where tracking was too wide.
+- Improved shared image and interaction behavior by giving landscape media more vertical room on mobile, refining media overlays, centering carousel controls more safely on smaller screens, and improving comparison-slider touch handling.
+- Fixed page-level stacking, spacing, and component rhythm issues across the site, including detail-page hero layouts, sticky side-panel behavior, pricing snippet grids, contact/business-hours rows, gallery columns, and journal preview compositions.
+- Removed remaining accidental horizontal-scroll risk areas and revalidated the frontend with lint and production build checks after the responsive pass.
 
 ## Completed In Phase R2C
 - Strengthened button visibility across the homepage and shared CTA surfaces by improving contrast, shadow definition, focus treatment, and touch comfort without making the UI feel heavy.
@@ -135,6 +142,7 @@ The homepage and its key preview sections have received a final visibility and i
 9. Homepage layout cleanup after asset integration (Done)
 10. Missing asset completion and preview consistency (Done)
 11. Visibility and interaction polish before final presentation (Done)
+12. Full-site responsive audit and layout hardening (Done)
 
 ## Planned Main Pages
 - Home (Done)
@@ -151,7 +159,7 @@ The homepage and its key preview sections have received a final visibility and i
 - Contact / Booking (Done)
 
 ## Immediate Next Goal
-Phase R3: perform final delivery hardening across the finished frontend, focusing on real-device QA, small responsive/accessibility/performance calibration, and any last low-risk presentation fixes.
+Phase R3: perform final delivery hardening across the finished frontend, focusing on real-device QA, accessibility/performance calibration, and any last low-risk presentation fixes now that the responsive baseline is hardened site-wide.
 
 ## Open Creative Direction
 Use soft luxury, not dark glam, not fashion-editorial-first, not medical beauty-tech.

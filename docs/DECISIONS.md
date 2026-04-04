@@ -118,3 +118,9 @@ Phase R2C: The final homepage polish should prioritize clearer action visibility
 
 ### D36
 Phase R2C: Interaction polish should stay structural-light, using spacing, anchored action rows, and subtle hover motion to improve usability rather than introducing new modules or louder visual treatments.
+
+### D37
+Phase R2D: Responsive hardening should be handled through shared primitives first, especially heading scale, button wrapping, media overlay spacing, slider controls, and shell-level spacing, so page fixes inherit a more stable baseline instead of repeating one-off breakpoints.
+
+### D38
+Phase R2D: Multi-column and sticky detail-page layouts should relax earlier on tablet and small-laptop widths, favoring cleaner stacking and safer content flow over rigid desktop compositions.
