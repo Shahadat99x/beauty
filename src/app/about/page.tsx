@@ -22,7 +22,7 @@ export default function AboutPage() {
       <section className="section-space pt-0">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-            <div className="relative h-full min-h-[400px] w-full overflow-hidden rounded-[2.5rem]">
+            <div className="relative h-full min-h-[340px] w-full overflow-hidden rounded-[2.5rem] sm:min-h-[400px]">
               <MediaFrame
                 aspect="portrait"
                 title="Salon interior"
@@ -63,6 +63,7 @@ export default function AboutPage() {
               eyebrow="The environment"
               title="Designed for calm."
               description="Every element of our space is chosen to slow down your day and elevate your routine. A quiet atmosphere, signature scents, and private treatment rooms ensure focus remains entirely on you."
+              align="center"
             />
           </div>
           <div className="mt-12 grid gap-4 sm:grid-cols-2">
@@ -72,7 +73,7 @@ export default function AboutPage() {
               subtitle="Private, quiet, and light-filled."
               label="Studio detail"
               tone="blush"
-              className="h-[300px]"
+              className="min-h-[260px] sm:h-[300px]"
             />
             <MediaFrame
               aspect="landscape"
@@ -80,7 +81,7 @@ export default function AboutPage() {
               subtitle="Designed for unhurried planning."
               label="Studio detail"
               tone="champagne"
-              className="h-[300px]"
+              className="min-h-[260px] sm:h-[300px]"
             />
           </div>
         </Container>

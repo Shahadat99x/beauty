@@ -45,7 +45,7 @@ export default async function JournalDetailPage({
         <Container>
           <div className="mx-auto max-w-4xl text-center">
             <Badge>{post.category}</Badge>
-            <h1 className="mt-8 text-balance font-serif text-[2.75rem] leading-[1] text-ink-strong sm:text-[4rem] lg:text-[4.5rem]">
+            <h1 className="page-title mt-8 text-balance font-serif text-ink-strong">
               {post.title}
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg sm:leading-9">

@@ -23,8 +23,8 @@ export default function ContactPage() {
 
       <section className="section-space pt-0">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr]">
-            <div className="surface-card rounded-[2.5rem] p-8 sm:p-10">
+          <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+            <div className="surface-card rounded-[2.5rem] p-6 sm:p-10">
               <h2 className="font-serif text-3xl text-ink-strong sm:text-4xl">
                 Booking Request
               </h2>
@@ -157,10 +157,10 @@ export default function ContactPage() {
                   {studioInfo.hours.map((hour) => (
                     <div
                       key={hour.day}
-                      className="flex justify-between border-b border-border/70 pb-3 text-sm last:border-0 last:pb-0"
+                      className="flex flex-col gap-1.5 border-b border-border/70 pb-3 text-sm last:border-0 last:pb-0 sm:flex-row sm:items-start sm:justify-between sm:gap-4"
                     >
                       <span className="text-muted">{hour.day}</span>
-                      <span className="font-medium text-ink">{hour.value}</span>
+                      <span className="font-medium text-ink sm:text-right">{hour.value}</span>
                     </div>
                   ))}
                 </div>

@@ -28,7 +28,7 @@ export default function JournalPage() {
           <Container>
             <Link href={`/journal/${featuredPost.slug}`} className="group block">
               <div className="surface-panel grid gap-8 rounded-[2.5rem] p-5 transition-[transform,box-shadow] duration-500 ease-out group-hover:-translate-y-1 group-hover:shadow-[var(--shadow-card-hover)] sm:p-6 lg:grid-cols-[1.04fr_0.96fr] lg:items-center lg:gap-10 lg:p-10">
-                <div className="relative h-full min-h-[280px] w-full overflow-hidden rounded-[2rem] lg:min-h-[400px]">
+                <div className="relative h-full min-h-[260px] w-full overflow-hidden rounded-[2rem] sm:min-h-[320px] lg:min-h-[400px]">
                   <MediaFrame
                     aspect="landscape"
                     tone={featuredPost.imageTone}
@@ -47,7 +47,7 @@ export default function JournalPage() {
                     <span className="h-1 w-1 rounded-full bg-border" />
                     <span>{featuredPost.readTime}</span>
                   </div>
-                  <h2 className="font-serif text-3xl leading-tight text-ink-strong sm:text-4xl lg:text-5xl">
+                  <h2 className="section-title font-serif text-ink-strong">
                     {featuredPost.title}
                   </h2>
                   <p className="text-lg leading-8 text-muted">

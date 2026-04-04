@@ -17,7 +17,7 @@ export default function GalleryPage() {
         title="The visual diary."
         description="A curated selection of client results, treatment moods, and quiet studio details arranged to feel soft, polished, and editorial."
       >
-        <div className="grid gap-3 sm:grid-cols-3">
+        <div className="grid gap-3 md:grid-cols-3">
           {[
             "Results-led polish",
             "Calm studio atmosphere",
@@ -35,7 +35,7 @@ export default function GalleryPage() {
 
       <section className="section-space pt-0">
         <Container>
-          <div className="columns-1 gap-6 space-y-6 sm:columns-2 lg:columns-3">
+          <div className="columns-1 gap-6 space-y-6 md:columns-2 xl:columns-3">
             {galleryItems.map((item) => (
               <article
                 key={item.slug}
@@ -56,7 +56,7 @@ export default function GalleryPage() {
                   <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-muted">
                     {item.service}
                   </p>
-                  <h2 className="mt-2 font-serif text-[1.95rem] leading-[0.95] text-ink-strong">
+                  <h2 className="card-title mt-2 font-serif text-ink-strong">
                     {item.title}
                   </h2>
                 </div>

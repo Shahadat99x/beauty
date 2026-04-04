@@ -59,18 +59,18 @@ export default async function ServiceDetailPage({
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div className="space-y-8">
               <Badge>{service.category}</Badge>
-              <h1 className="text-balance font-serif text-[3.25rem] leading-[0.95] text-ink-strong sm:text-[4.6rem]">
+              <h1 className="page-title text-balance font-serif text-ink-strong">
                 {service.title}
               </h1>
-              <p className="max-w-xl text-lg leading-8 text-muted sm:text-xl">
+              <p className="max-w-xl text-lg leading-8 text-muted">
                 {service.excerpt}
               </p>
 
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+              <div className="space-y-4">
                 <Button href="/contact" size="lg">
                   Request Booking
                 </Button>
-                <div className="grid gap-3 sm:grid-cols-2">
+                <div className="grid max-w-lg gap-3 sm:grid-cols-2">
                   <div className="surface-panel rounded-full px-4 py-3 text-sm font-semibold text-ink">
                     <span className="text-muted">Duration</span>
                     <span className="ml-2 text-ink-strong">{service.duration}</span>
@@ -83,7 +83,7 @@ export default async function ServiceDetailPage({
               </div>
             </div>
 
-            <div className="relative h-full min-h-[420px] w-full overflow-hidden rounded-[2.5rem]">
+            <div className="relative h-full min-h-[360px] w-full overflow-hidden rounded-[2.5rem] sm:min-h-[420px]">
               <MediaFrame
                 aspect="portrait"
                 title={service.title}
@@ -128,7 +128,7 @@ export default async function ServiceDetailPage({
             </div>
 
             <div className="lg:col-span-4">
-              <div className="surface-panel sticky top-28 rounded-[2.5rem] p-6 sm:p-8">
+              <div className="surface-panel rounded-[2.5rem] p-6 sm:p-8 xl:sticky xl:top-28">
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted">
                   The Promise
                 </p>

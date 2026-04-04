@@ -52,7 +52,7 @@ export default async function SpecialistDetailPage({
       <section className="pb-12 pt-8 sm:pt-14 lg:pb-16 lg:pt-20">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <div className="relative h-full min-h-[460px] w-full overflow-hidden rounded-[2.5rem]">
+            <div className="relative h-full min-h-[380px] w-full overflow-hidden rounded-[2.5rem] sm:min-h-[460px]">
               <MediaFrame
                 aspect="portrait"
                 title={specialist.name}
@@ -66,7 +66,7 @@ export default async function SpecialistDetailPage({
 
             <div className="space-y-6 lg:pl-8">
               <Badge>{specialist.role}</Badge>
-              <h1 className="text-balance font-serif text-[3.25rem] leading-[0.95] text-ink-strong sm:text-[4.6rem]">
+              <h1 className="page-title text-balance font-serif text-ink-strong">
                 {specialist.name}
               </h1>
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-accent-strong">
@@ -86,7 +86,7 @@ export default async function SpecialistDetailPage({
               ) : null}
 
               <div className="pt-8">
-                <Button href="/contact" size="lg" className="px-10">
+                <Button href="/contact" size="lg" className="w-full px-8 sm:w-auto sm:px-10">
                   Request {specialist.name.split(" ")[0]}
                 </Button>
               </div>

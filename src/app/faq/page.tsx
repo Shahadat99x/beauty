@@ -25,7 +25,7 @@ export default function FaqPage() {
           <div className="mx-auto max-w-4xl space-y-16">
             {categories.map((category) => (
               <div key={category} className="space-y-8">
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3 sm:gap-4">
                   <h2 className="font-serif text-3xl text-ink-strong">{category}</h2>
                   <div className="h-px flex-1 bg-border/50" />
                 </div>
@@ -35,7 +35,7 @@ export default function FaqPage() {
                     .map((item) => (
                       <div
                         key={item.question}
-                        className="surface-card rounded-3xl p-8 transition-[transform,box-shadow,border-color] duration-500 ease-out hover:-translate-y-1 hover:border-border-strong/70 hover:shadow-[var(--shadow-card-hover)]"
+                        className="surface-card rounded-3xl p-6 transition-[transform,box-shadow,border-color] duration-500 ease-out hover:-translate-y-1 hover:border-border-strong/70 hover:shadow-[var(--shadow-card-hover)] sm:p-8"
                       >
                         <h3 className="text-lg font-semibold text-ink-strong">
                           {item.question}

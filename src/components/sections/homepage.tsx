@@ -31,20 +31,20 @@ const resultHighlights = [
 export function Homepage() {
   return (
     <>
-      <section className="pb-14 pt-8 sm:pt-10 lg:pb-20">
+      <section className="pb-12 pt-6 sm:pt-8 lg:pb-20">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-[0.94fr_1.06fr] lg:items-center">
-            <div className="space-y-8 lg:pr-4">
+          <div className="grid gap-10 lg:grid-cols-[0.94fr_1.06fr] lg:items-center">
+            <div className="space-y-7 lg:pr-4">
               <Badge>Vilnius studio • By appointment</Badge>
 
               <div className="space-y-5">
                 <p className="text-sm font-semibold uppercase tracking-[0.28em] text-muted">
                   Soft luxury beauty rituals
                 </p>
-                <h1 className="text-balance font-serif text-[3.15rem] leading-[0.92] text-ink-strong sm:text-[4.4rem] lg:text-[5.8rem]">
+                <h1 className="display-title text-balance font-serif text-ink-strong">
                   Calm beauty, composed with more intention.
                 </h1>
-                <p className="max-w-xl text-base leading-8 text-muted sm:text-lg">
+                <p className="max-w-xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
                   {studioInfo.shortName} is built for women who want refined
                   treatments, a quieter appointment rhythm, and polished results
                   that still feel natural in daylight.
@@ -98,11 +98,11 @@ export function Homepage() {
                 tone="champagne"
                 image={beautyMedia.heroSpa}
                 priority
-                className="relative min-h-[520px] rounded-[2.75rem] sm:min-h-[620px]"
-                overlayClassName="max-w-[18rem] sm:max-w-[20rem]"
+                className="relative min-h-[440px] rounded-[2.3rem] sm:min-h-[560px] sm:rounded-[2.75rem] lg:min-h-[620px]"
+                overlayClassName="max-w-[14rem] sm:max-w-[20rem]"
               />
 
-              <div className="surface-panel absolute bottom-5 left-5 max-w-[14rem] rounded-[1.5rem] px-4 py-4 sm:bottom-7 sm:left-7">
+              <div className="surface-panel absolute bottom-4 left-4 max-w-[12rem] rounded-[1.35rem] px-4 py-4 sm:bottom-7 sm:left-7 sm:max-w-[14rem] sm:rounded-[1.5rem]">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-muted">
                   Reviewed and tailored
                 </p>
@@ -121,7 +121,7 @@ export function Homepage() {
             <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-2xl space-y-4">
                 <Badge variant="outline">Signature services</Badge>
-                <h2 className="text-balance font-serif text-[2.45rem] leading-[0.96] text-ink-strong sm:text-[3.05rem] lg:text-[3.8rem]">
+                <h2 className="section-title text-balance font-serif text-ink-strong">
                   Signature treatments should read in the cards, not in extra
                   explainer blocks.
                 </h2>
@@ -135,7 +135,7 @@ export function Homepage() {
               </Button>
             </div>
 
-            <Carousel slideClassName="w-[88vw] sm:w-[21rem] lg:w-[22.5rem]">
+            <Carousel slideClassName="w-[84vw] sm:w-[20rem] md:w-[21rem] xl:w-[22.5rem]">
               {featuredServices.map((service) => (
                 <article
                   key={service.slug}
@@ -149,7 +149,7 @@ export function Homepage() {
                     tone={service.imageTone}
                     image={service.image}
                     className="rounded-[1.6rem]"
-                    overlayClassName="max-w-[12rem] bg-white/58 p-3 sm:max-w-[13rem] sm:p-4"
+                    overlayClassName="max-w-[11.5rem] bg-white/58 p-3 sm:max-w-[13rem] sm:p-4"
                   />
                   <div className="flex flex-1 flex-col gap-4 px-2 pb-2 pt-5">
                     <div className="flex items-center justify-between gap-4 text-sm">
@@ -196,7 +196,7 @@ export function Homepage() {
             <div className="space-y-6">
               <div className="max-w-xl space-y-4">
                 <Badge variant="outline">Studio approach</Badge>
-                <h2 className="text-balance font-serif text-[2.3rem] leading-[0.98] text-ink-strong sm:text-[2.95rem] lg:text-[3.55rem]">
+                <h2 className="section-title text-balance font-serif text-ink-strong">
                   Fewer words, better balance, clearer atmosphere.
                 </h2>
                 <p className="text-sm leading-7 text-muted sm:text-base sm:leading-8">
@@ -235,7 +235,7 @@ export function Homepage() {
             <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-2xl space-y-4">
                 <Badge variant="outline">Studio specialists</Badge>
-                <h2 className="text-balance font-serif text-[2.35rem] leading-[0.98] text-ink-strong sm:text-[3rem] lg:text-[3.7rem]">
+                <h2 className="section-title text-balance font-serif text-ink-strong">
                   Distinct specialties, lighter presentation, stronger portrait
                   presence.
                 </h2>
@@ -303,14 +303,14 @@ export function Homepage() {
 
       <section className="section-space-tight">
         <Container>
-          <div className="overflow-hidden rounded-[3rem] bg-[linear-gradient(180deg,#4a3832_0%,#261d1a_100%)] px-6 py-8 sm:px-8 sm:py-10 lg:px-10 lg:py-12">
+          <div className="overflow-hidden rounded-[3rem] bg-[linear-gradient(180deg,#4a3832_0%,#261d1a_100%)] px-5 py-6 sm:px-8 sm:py-10 lg:px-10 lg:py-12">
             <div className="grid gap-8 lg:grid-cols-[1.14fr_0.86fr] lg:items-start">
               <div className="space-y-6">
                 <div className="space-y-4">
                   <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/68">
                     Results preview
                   </p>
-                  <h2 className="text-balance font-serif text-[2.55rem] leading-[0.94] text-white sm:text-[3.25rem] lg:text-[4rem]">
+                  <h2 className="section-title text-balance font-serif text-white">
                     Results stay soft, but the difference still reads clearly.
                   </h2>
                   <p className="max-w-2xl text-sm leading-7 text-white/72 sm:text-base sm:leading-8">
@@ -335,7 +335,7 @@ export function Homepage() {
                   ))}
                 </div>
 
-                <div className="relative h-[23rem] w-full overflow-hidden rounded-[2.5rem] bg-shell-soft sm:h-[29rem]">
+                <div className="relative h-[20rem] w-full overflow-hidden rounded-[2.5rem] bg-shell-soft sm:h-[27rem] lg:h-[29rem]">
                   <ComparisonSlider
                     beforeTitle="Before Treatment"
                     afterTitle="After 6 Weeks"
@@ -364,19 +364,19 @@ export function Homepage() {
                     Treatment focus
                   </p>
                   <div className="mt-4 space-y-4 text-sm text-white/74">
-                    <div className="flex justify-between gap-4 border-b border-white/12 pb-3">
+                    <div className="flex flex-col gap-1.5 border-b border-white/12 pb-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
                       <span>Target</span>
                       <span className="text-right text-white">
                         Skin texture and hydration
                       </span>
                     </div>
-                    <div className="flex justify-between gap-4 border-b border-white/12 pb-3">
+                    <div className="flex flex-col gap-1.5 border-b border-white/12 pb-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
                       <span>Protocol</span>
                       <span className="text-right text-white">
                         Cellular Renewal Peel
                       </span>
                     </div>
-                    <div className="flex justify-between gap-4">
+                    <div className="flex flex-col gap-1.5 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
                       <span>Timeline</span>
                       <span className="text-right text-white">
                         3 sessions over 6 weeks
@@ -395,7 +395,7 @@ export function Homepage() {
           <div className="grid gap-6 lg:grid-cols-[0.58fr_1.42fr] lg:items-end">
             <div className="max-w-md space-y-4">
               <Badge variant="outline">Client words</Badge>
-              <h2 className="text-balance font-serif text-[2.2rem] leading-[0.98] text-ink-strong sm:text-[2.8rem] lg:text-[3.35rem]">
+              <h2 className="section-title text-balance font-serif text-ink-strong">
                 Tighter proof, lighter section.
               </h2>
               <p className="text-sm leading-7 text-muted sm:text-base sm:leading-8">
@@ -407,7 +407,7 @@ export function Homepage() {
               </p>
             </div>
 
-            <Carousel slideClassName="w-[88vw] sm:w-[22rem] lg:w-[23rem]">
+            <Carousel slideClassName="w-[84vw] sm:w-[21rem] md:w-[22rem] xl:w-[23rem]">
               {testimonials.map((testimonial) => (
                 <TestimonialCard
                   key={testimonial.id}
@@ -454,7 +454,7 @@ export function Homepage() {
             <div className="space-y-5">
               <div className="max-w-xl space-y-4">
                 <Badge variant="outline">Beauty journal</Badge>
-                <h2 className="text-balance font-serif text-[2.2rem] leading-[0.98] text-ink-strong sm:text-[2.8rem] lg:text-[3.3rem]">
+                <h2 className="section-title text-balance font-serif text-ink-strong">
                   A lighter editorial preview with less explanation.
                 </h2>
                 <p className="text-sm leading-7 text-muted sm:text-base sm:leading-8">
@@ -467,7 +467,7 @@ export function Homepage() {
                   <Link
                     key={post.slug}
                     href={`/journal/${post.slug}`}
-                    className="group block px-5 py-4 transition-colors duration-300 hover:bg-white/84"
+                    className="group block px-4 py-4 transition-colors duration-300 hover:bg-white/84 sm:px-5"
                   >
                     <div
                       className={
@@ -476,7 +476,7 @@ export function Homepage() {
                           : ""
                       }
                     >
-                      <div className="grid grid-cols-[5rem_1fr] items-center gap-4 sm:grid-cols-[6.5rem_1fr]">
+                      <div className="grid grid-cols-[4.5rem_1fr] items-center gap-3 sm:grid-cols-[6.5rem_1fr] sm:gap-4">
                         <div className="relative aspect-[4/5] overflow-hidden rounded-[1.4rem] border border-white/70 bg-shell-soft">
                           {post.image ? (
                             <Image
@@ -500,7 +500,7 @@ export function Homepage() {
                             <span className="h-1 w-1 rounded-full bg-border-strong" />
                             <span>{post.readTime}</span>
                           </div>
-                          <h3 className="mt-3 font-serif text-[1.85rem] leading-[0.98] text-ink-strong transition-colors duration-300 group-hover:text-ink">
+                          <h3 className="card-title mt-3 font-serif text-ink-strong transition-colors duration-300 group-hover:text-ink">
                             {post.title}
                           </h3>
                           <p className="mt-3 inline-flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-ink/76 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-ink">

@@ -21,7 +21,7 @@ export default function PricingPage() {
         title="Pricing & Protocols."
         description="Transparent pricing, clearly structured treatment tiers, and memberships designed to make ongoing care feel thoughtful rather than complicated."
       >
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-3">
           {pricingSnippets.map((item) => (
             <div key={item.title} className="surface-panel rounded-[1.5rem] px-5 py-5 text-left">
               <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-muted">
@@ -67,7 +67,7 @@ export default function PricingPage() {
                         }`}
                       >
                         {pkg.isPopular ? (
-                          <div className="absolute -top-3 right-6 rounded-full bg-accent-strong px-3 py-1 text-[0.6rem] font-bold uppercase tracking-widest text-ink shadow-sm">
+                          <div className="absolute right-4 top-4 rounded-full bg-accent-strong px-3 py-1 text-[0.58rem] font-bold uppercase tracking-[0.24em] text-ink shadow-sm sm:-top-3 sm:right-6 sm:text-[0.6rem] sm:tracking-widest">
                             Most Requested
                           </div>
                         ) : null}
@@ -135,6 +135,7 @@ export default function PricingPage() {
               eyebrow="Common Questions"
               title="Studio FAQ"
               description="Everything you need to know before booking your first appointment."
+              align="center"
             />
           </div>
 
