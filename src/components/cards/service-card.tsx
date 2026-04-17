@@ -1,3 +1,6 @@
+"use client";
+
+import { useSiteLanguage } from "@/components/providers/site-language-provider";
 import type { Service } from "@/lib/types";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -8,6 +11,8 @@ interface ServiceCardProps {
 }
 
 export function ServiceCard({ service }: ServiceCardProps) {
+  const { locale } = useSiteLanguage();
+
   return (
     <article className="surface-card group flex h-full flex-col rounded-[2rem] p-4 transition-[transform,box-shadow,border-color] duration-500 ease-out hover:-translate-y-1 hover:border-border-strong/70 hover:shadow-[var(--shadow-card-hover)] sm:p-5">
       <MediaFrame
@@ -33,7 +38,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
         <div className="mt-auto flex flex-col gap-4 border-t border-border/70 pt-5 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-xs uppercase tracking-[0.24em] text-muted">
-              Investment
+              {locale === "lt" ? "Kaina" : "Price"}
             </p>
             <p className="mt-1 text-lg font-semibold text-ink-strong">
               {service.priceFrom}
@@ -45,7 +50,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
             variant="secondary"
             className="w-full sm:w-auto"
           >
-            View Details
+            {locale === "lt" ? "Plačiau" : "Details"}
           </Button>
         </div>
       </div>
