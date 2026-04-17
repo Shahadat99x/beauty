@@ -1,3 +1,6 @@
+"use client";
+
+import { useSiteLanguage } from "@/components/providers/site-language-provider";
 import type { Specialist } from "@/lib/types";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -8,13 +11,15 @@ interface SpecialistCardProps {
 }
 
 export function SpecialistCard({ specialist }: SpecialistCardProps) {
+  const { locale } = useSiteLanguage();
+
   return (
     <article className="surface-card group flex h-full flex-col rounded-[2rem] p-4 transition-[transform,box-shadow,border-color] duration-500 ease-out hover:-translate-y-1 hover:border-border-strong/70 hover:shadow-[var(--shadow-card-hover)] sm:p-5">
       <MediaFrame
         aspect="portrait"
         title={specialist.name}
         subtitle={specialist.role}
-        label="Resident specialist"
+        label={locale === "lt" ? "Specialistė" : "Specialist"}
         tone={specialist.imageTone}
         image={specialist.image}
         className="rounded-[1.75rem]"
@@ -38,9 +43,9 @@ export function SpecialistCard({ specialist }: SpecialistCardProps) {
           ))}
         </div>
         <div className="mt-4 border-t border-border/70 pt-5">
-           <Button href={`/specialists/${specialist.slug}`} size="md" variant="secondary" fullWidth>
-             View Profile
-           </Button>
+          <Button href={`/specialists/${specialist.slug}`} size="md" variant="secondary" fullWidth>
+            {locale === "lt" ? "Plačiau" : "Profile"}
+          </Button>
         </div>
       </div>
     </article>
