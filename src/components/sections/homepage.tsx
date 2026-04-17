@@ -17,11 +17,10 @@ import { galleryItems } from "@/data/gallery";
 import { getHomepageContent } from "@/data/homepage";
 import { beautyMedia } from "@/data/media";
 import { services } from "@/data/services";
-import { philosophyPillars, studioInfo } from "@/data/site";
 import { specialists } from "@/data/specialists";
 import { testimonials } from "@/data/testimonials";
 
-const featuredServices = services.slice(0, 4);
+const serviceMap = new Map(services.map((service) => [service.slug, service]));
 const featuredSpecialists = specialists.slice(0, 3);
 const featuredJournalPost = blogPosts[0]!;
 const secondaryJournalPosts = blogPosts.slice(1, 3);
@@ -124,61 +123,68 @@ export function Homepage() {
           <div className="space-y-6">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-2xl space-y-4">
-                <Badge variant="outline">Signature services</Badge>
+                <Badge variant="outline">{homepageContent.services.badge}</Badge>
                 <h2 className="section-title text-balance font-serif text-ink-strong">
-                  Signature treatments should read in the cards, not in extra
-                  explainer blocks.
+                  {homepageContent.services.title}
                 </h2>
                 <p className="text-sm leading-7 text-muted sm:text-base sm:leading-8">
-                  Start with glow, definition, event prep, and skin reset.
+                  {homepageContent.services.description}
                 </p>
               </div>
 
               <Button href="/services" variant="secondary">
-                View full treatment menu
+                {homepageContent.services.ctaLabel}
               </Button>
             </div>
 
             <Carousel slideClassName="w-[84vw] sm:w-[20rem] md:w-[21rem] xl:w-[22.5rem]">
-              {featuredServices.map((service) => (
-                <article
-                  key={service.slug}
-                  className="surface-card group flex h-full flex-col rounded-[2rem] p-4 transition-[transform,box-shadow,border-color] duration-500 ease-out hover:-translate-y-1 hover:border-border-strong/70 hover:shadow-[var(--shadow-card-hover)] sm:p-5"
-                >
-                  <MediaFrame
-                    aspect="landscape"
-                    title={service.title}
-                    subtitle={service.highlight}
-                    label={service.category}
-                    tone={service.imageTone}
-                    image={service.image}
-                    className="rounded-[1.6rem]"
-                    overlayClassName="max-w-[11.5rem] bg-white/58 p-3 sm:max-w-[13rem] sm:p-4"
-                  />
-                  <div className="flex flex-1 flex-col gap-4 px-2 pb-2 pt-5">
-                    <div className="flex items-center justify-between gap-4 text-sm">
-                      <span className="font-medium text-muted">
-                        {service.duration}
-                      </span>
-                      <span className="font-semibold text-ink-strong">
-                        {service.priceFrom}
-                      </span>
+              {homepageContent.services.cards.map((serviceCard) => {
+                const service = serviceMap.get(serviceCard.slug);
+
+                if (!service) {
+                  return null;
+                }
+
+                return (
+                  <article
+                    key={service.slug}
+                    className="surface-card group flex h-full flex-col rounded-[2rem] p-4 transition-[transform,box-shadow,border-color] duration-500 ease-out hover:-translate-y-1 hover:border-border-strong/70 hover:shadow-[var(--shadow-card-hover)] sm:p-5"
+                  >
+                    <MediaFrame
+                      aspect="landscape"
+                      title={serviceCard.title}
+                      subtitle={serviceCard.highlight}
+                      label={serviceCard.category}
+                      tone={service.imageTone}
+                      image={service.image}
+                      className="rounded-[1.6rem]"
+                      overlayClassName="max-w-[10.75rem] bg-white/58 p-3 sm:max-w-[12rem] sm:p-3.5"
+                    />
+                    <div className="flex flex-1 flex-col gap-4 px-2 pb-2 pt-5">
+                      <div className="flex items-center justify-between gap-4 text-sm">
+                        <span className="font-medium text-muted">
+                          {serviceCard.duration}
+                        </span>
+                        <span className="font-semibold text-ink-strong">
+                          {serviceCard.priceFrom}
+                        </span>
+                      </div>
+                      <p className="text-sm leading-7 text-muted">
+                        {serviceCard.excerpt}
+                      </p>
+                      <div className="mt-auto pt-2">
+                        <Button
+                          href={`/services/${service.slug}`}
+                          size="md"
+                          variant="secondary"
+                        >
+                          {locale === "lt" ? "Plačiau" : "Details"}
+                        </Button>
+                      </div>
                     </div>
-                    <p className="text-sm leading-7 text-muted">
-                      {service.excerpt}
-                    </p>
-                    <div className="mt-auto pt-2">
-                      <Button
-                        href={`/services/${service.slug}`}
-                        size="md"
-                        variant="secondary"
-                      >
-                        View details
-                      </Button>
-                    </div>
-                  </div>
-                </article>
-              ))}
+                  </article>
+                );
+              })}
             </Carousel>
           </div>
         </Container>
@@ -189,28 +195,27 @@ export function Homepage() {
           <div className="grid gap-8 lg:grid-cols-[1.04fr_0.96fr] lg:items-center">
             <MediaFrame
               aspect="landscape"
-              title="A quieter appointment rhythm"
-              subtitle="Warm consultation, tactile care, and enough polish to feel finished without becoming theatrical."
+              title={homepageContent.approach.mediaTitle}
+              subtitle={homepageContent.approach.mediaSubtitle}
               tone="pearl"
               image={beautyMedia.productFlatlay}
               className="min-h-[320px] sm:min-h-[420px]"
-              overlayClassName="max-w-[16rem] bg-white/56 p-4"
+              overlayClassName="max-w-[16rem] bg-white/60 p-4"
             />
 
             <div className="space-y-6">
               <div className="max-w-xl space-y-4">
-                <Badge variant="outline">Studio approach</Badge>
+                <Badge variant="outline">{homepageContent.approach.badge}</Badge>
                 <h2 className="section-title text-balance font-serif text-ink-strong">
-                  Fewer words, better balance, clearer atmosphere.
+                  {homepageContent.approach.title}
                 </h2>
                 <p className="text-sm leading-7 text-muted sm:text-base sm:leading-8">
-                  The studio experience is warm, consult-led, and intentionally
-                  unhurried from the first conversation through aftercare.
+                  {homepageContent.approach.description}
                 </p>
               </div>
 
               <div className="grid gap-3 sm:grid-cols-2">
-                {philosophyPillars.slice(0, 2).map((pillar) => (
+                {homepageContent.approach.pillars.map((pillar) => (
                   <div
                     key={pillar}
                     className="rounded-[1.6rem] border border-border/70 bg-white/62 p-4"
@@ -222,10 +227,10 @@ export function Homepage() {
 
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted">
-                  Consultation-first care, tailored to real maintenance habits
+                  {homepageContent.approach.note}
                 </p>
                 <Button href="/pricing" variant="secondary">
-                  View pricing
+                  {homepageContent.approach.ctaLabel}
                 </Button>
               </div>
             </div>
