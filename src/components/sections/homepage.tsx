@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { useSiteLanguage } from "@/components/providers/site-language-provider";
 import { TestimonialCard } from "@/components/cards/testimonial-card";
 import { CtaBlock } from "@/components/sections/cta-block";
 import { Badge } from "@/components/ui/badge";
@@ -11,9 +14,10 @@ import { Container } from "@/components/ui/container";
 import { MediaFrame } from "@/components/ui/media-frame";
 import { blogPosts } from "@/data/blog-posts";
 import { galleryItems } from "@/data/gallery";
+import { getHomepageContent } from "@/data/homepage";
 import { beautyMedia } from "@/data/media";
 import { services } from "@/data/services";
-import { philosophyPillars, studioInfo, trustMetrics } from "@/data/site";
+import { philosophyPillars, studioInfo } from "@/data/site";
 import { specialists } from "@/data/specialists";
 import { testimonials } from "@/data/testimonials";
 
@@ -29,39 +33,40 @@ const resultHighlights = [
 ];
 
 export function Homepage() {
+  const { locale } = useSiteLanguage();
+  const homepageContent = getHomepageContent(locale);
+
   return (
     <>
       <section className="pb-12 pt-6 sm:pt-8 lg:pb-20">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.94fr_1.06fr] lg:items-center">
             <div className="space-y-7 lg:pr-4">
-              <Badge>Vilnius studio • By appointment</Badge>
+              <Badge>{homepageContent.hero.badge}</Badge>
 
               <div className="space-y-5">
                 <p className="text-sm font-semibold uppercase tracking-[0.28em] text-muted">
-                  Soft luxury beauty rituals
+                  {homepageContent.hero.eyebrow}
                 </p>
                 <h1 className="display-title text-balance font-serif text-ink-strong">
-                  Calm beauty, composed with more intention.
+                  {homepageContent.hero.title}
                 </h1>
                 <p className="max-w-xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                  {studioInfo.shortName} is built for women who want refined
-                  treatments, a quieter appointment rhythm, and polished results
-                  that still feel natural in daylight.
+                  {homepageContent.hero.description}
                 </p>
               </div>
 
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Button href="/contact" size="lg">
-                  Book a consultation
+                  {homepageContent.hero.primaryLabel}
                 </Button>
                 <Button href="/services" size="lg" variant="secondary">
-                  Explore signature services
+                  {homepageContent.hero.secondaryLabel}
                 </Button>
               </div>
 
               <div className="grid gap-4 sm:grid-cols-3">
-                {trustMetrics.map((metric) => (
+                {homepageContent.trustMetrics.map((metric) => (
                   <div
                     key={metric.label}
                     className="rounded-[1.5rem] border border-border/70 bg-white/72 px-5 py-4 shadow-[0_16px_36px_rgba(86,64,54,0.08)] transition-[transform,box-shadow] duration-500 ease-out hover:-translate-y-1 hover:shadow-[var(--shadow-card-hover)]"
@@ -78,12 +83,10 @@ export function Homepage() {
 
               <div className="surface-panel rounded-[1.75rem] px-5 py-4">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-muted">
-                  Studio promise
+                  {homepageContent.hero.promiseLabel}
                 </p>
                 <p className="mt-2 text-sm leading-7 text-ink">
-                  One-to-one appointments, tailored consultation, and beauty
-                  work designed to settle into real routines instead of chasing
-                  louder trends.
+                  {homepageContent.hero.promiseText}
                 </p>
               </div>
             </div>
@@ -93,21 +96,22 @@ export function Homepage() {
 
               <MediaFrame
                 aspect="hero"
-                title="Editorial calm, salon warmth"
-                subtitle="Soft morning light, warm textures, and a quiet consultation-first atmosphere shape every appointment."
+                title={homepageContent.hero.mediaTitle}
+                subtitle={homepageContent.hero.mediaSubtitle}
+                label={homepageContent.hero.mediaLabel}
                 tone="champagne"
                 image={beautyMedia.heroSpa}
                 priority
                 className="relative min-h-[440px] rounded-[2.3rem] sm:min-h-[560px] sm:rounded-[2.75rem] lg:min-h-[620px]"
-                overlayClassName="max-w-[14rem] sm:max-w-[20rem]"
+                overlayClassName="max-w-[13rem] bg-white/66 sm:max-w-[17rem]"
               />
 
-              <div className="surface-panel absolute bottom-4 left-4 max-w-[12rem] rounded-[1.35rem] px-4 py-4 sm:bottom-7 sm:left-7 sm:max-w-[14rem] sm:rounded-[1.5rem]">
+              <div className="surface-panel absolute bottom-4 left-4 max-w-[12.5rem] rounded-[1.35rem] px-4 py-4 sm:bottom-7 sm:left-7 sm:max-w-[15rem] sm:rounded-[1.5rem]">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-muted">
-                  Reviewed and tailored
+                  {homepageContent.hero.mediaStatLabel}
                 </p>
                 <p className="mt-2 font-serif text-2xl leading-none text-ink-strong">
-                  Calm from arrival to finish
+                  {homepageContent.hero.mediaStatValue}
                 </p>
               </div>
             </div>
