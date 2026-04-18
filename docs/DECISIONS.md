@@ -130,3 +130,6 @@ Client Adaptation Phase 1: The LT/EN foundation should use a lightweight hardcod
 
 ### D40
 Client Adaptation Phase 2: Homepage conversion should use a dedicated LT/EN homepage content layer keyed to the existing service, specialist, result, and journal slugs so the homepage can be localized and rewritten cleanly without prematurely forcing a full inner-page data rewrite.
+
+### D41
+Client Adaptation Phase 3: Inner-page LT/EN conversion should follow the same pattern as the homepage by using domain-specific localized overlay files plus thin client page wrappers, preserving the current App Router structure and slug-based datasets while letting the existing language toggle switch full page bodies.

@@ -170,11 +170,19 @@ The homepage now reads as a believable Grožio studija Lauryta client-facing web
 - Blog Detail / Journal Detail (Done)
 - About (Done)
 - Pricing (Done)
-- FAQ (Done - merged into Pricing for better UX)
+- FAQ (Done)
 - Contact / Booking (Done)
 
 ## Immediate Next Goal
-Client Adaptation Phase 3: extend the Grožio studija Lauryta LT/EN conversion into the highest-priority inner pages, starting with services, specialists, contact, pricing, and other remaining shared client-facing content that still reads like portfolio-era demo copy.
+Post-Phase 3 delivery QA: perform a final browser-based presentation pass, confirm any real client data that should replace still-safe placeholders, and keep any remaining polish strictly low-risk.
+
+## Latest Progress
+- Phase 3 completed the LT/EN client-facing rewrite across the main inner pages, including Services, Service Detail, Specialists, Specialist Detail, About, Contact, Pricing, FAQ, Journal archive, and Journal detail pages.
+- Inner-page body copy now follows the same Lithuanian-first Grožio studija Lauryta tone as the homepage, with calmer, more practical English parity and fewer portfolio-demo phrases.
+- Services, specialists, journal, contact, pricing, and FAQ now use dedicated localized content overlays so the shared language toggle can switch real page content without introducing a larger i18n system.
+- Contact, pricing, FAQ, and journal helper surfaces were rewritten to feel more useful and conversion-oriented, and stale article fallback placeholder text was removed from journal detail pages.
+- Shared metadata was hardened further with more business-facing page descriptions and site-level keywords aligned to a real Vilnius beauty studio presentation.
+- Full-project `lint` and `build` both pass after the Phase 3 conversion.
 
 ## Open Creative Direction
 Use soft luxury, not dark glam, not fashion-editorial-first, not medical beauty-tech.

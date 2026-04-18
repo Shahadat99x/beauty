@@ -1,28 +1,26 @@
 # NEXT_PHASE
 
 ## Active Next Phase
-Client Adaptation Phase 3 - Inner-Page Client Conversion
+Final Presentation QA and Content Confirmation
 
 ## Goal
-Extend the Grožio studija Lauryta adaptation into the highest-priority inner pages so the site feels consistently client-facing beyond the homepage while preserving the current layout system and shared LT/EN foundation.
+Treat the current build as a near-final client presentation and focus only on validation, tiny polish, and replacing placeholder-safe business details if real client inputs become available.
 
 ## Scope
-- rewrite the most visible remaining inner-page copy so services, specialists, contact, pricing, and related client journeys feel consistent with the new homepage tone
-- continue using Lithuanian as the primary language with restrained English parity through the existing lightweight content structure
-- replace remaining portfolio-demo or Maison de Lueur-era phrasing in shared client-facing inner-page surfaces
-- preserve the current soft luxury layout, responsive behavior, and image-led balance unless copy length requires small layout adjustments
-- avoid broad rewrites of lower-priority article bodies or secondary detail content unless they clearly conflict with the client-facing positioning
+- do a browser-based review across LT and EN on mobile, tablet, laptop, and desktop
+- confirm that header, footer, CTA buttons, forms, cards, and detail-page layouts stay balanced with Lithuanian copy
+- replace only the safest remaining placeholder-style business details if real client data is provided, such as social links, testimonials, or article topics
+- keep any UI changes structural-light and limited to contrast, spacing, wrapping, crop, or rhythm fixes that clearly improve delivery quality
+- preserve the current soft luxury direction, frontend-only architecture, and lightweight bilingual setup
 
 ## Acceptance Criteria
-- core inner pages read as Grožio studija Lauryta rather than a mixed portfolio-demo concept
-- Lithuanian-first copy remains believable and practical across the main booking journey, with English kept equally restrained
-- shared CTA language and cross-page brand positioning stay consistent with the homepage and bilingual data foundation
-- no major visual regressions are introduced across mobile, tablet, laptop, and desktop
-- lower-priority pages remain cleanly deferred instead of forcing a full-site rewrite in one pass
+- the current build feels presentation-ready across the full main page set in both LT and EN
+- no obvious layout, contrast, wrapping, or overflow issues remain in the core client journey
+- placeholder content that remains is either intentionally acceptable for presentation or clearly identified for later confirmation
+- no major regressions are introduced while polishing
 
 ## Do Not Do
-- do not redesign the whole site or reopen major structure changes without a new scope
-- do not add backend, admin, auth, CMS, or database work
-- do not introduce complex i18n libraries or content-management architecture
-- do not deeply rewrite every article, detail page, or long-form body copy in one pass
-- do not expand the work beyond phased client adaptation and shared frontend content changes
+- do not reopen the homepage or inner-page copy conversion without a new content brief
+- do not redesign the site, add new features, or introduce backend, CMS, auth, or database work
+- do not replace the lightweight localization approach with a larger i18n system
+- do not expand the polish pass into a new multi-phase rewrite
