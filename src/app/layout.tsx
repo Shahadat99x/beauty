@@ -22,12 +22,12 @@ export const metadata: Metadata = {
   description: siteDescription,
   applicationName: siteName,
   keywords: [
-    "beauty studio website",
-    "soft luxury salon",
-    "beauty salon concept",
-    "premium beauty website",
-    "frontend portfolio project",
-    "beauty business website",
+    "grozio studija vilnius",
+    "beauty studio vilnius",
+    "facial treatments vilnius",
+    "brow and lash studio",
+    "premium beauty care",
+    "beauty salon website",
   ],
   category: "beauty",
   alternates: {

@@ -1,3 +1,6 @@
+"use client";
+
+import { useSiteLanguage } from "@/components/providers/site-language-provider";
 import type { BlogPost } from "@/lib/types";
 import { Button } from "@/components/ui/button";
 import { MediaFrame } from "@/components/ui/media-frame";
@@ -7,6 +10,8 @@ interface BlogCardProps {
 }
 
 export function BlogCard({ post }: BlogCardProps) {
+  const { siteContent } = useSiteLanguage();
+
   return (
     <article className="surface-card group flex h-full flex-col rounded-[2rem] p-4 transition-[transform,box-shadow,border-color] duration-500 ease-out hover:-translate-y-1 hover:border-border-strong/70 hover:shadow-[var(--shadow-card-hover)] sm:p-5">
       <MediaFrame
@@ -36,7 +41,7 @@ export function BlogCard({ post }: BlogCardProps) {
             variant="ghost"
             className="w-full sm:w-auto"
           >
-            Read article
+            {siteContent.common.readMore}
           </Button>
         </div>
       </div>
