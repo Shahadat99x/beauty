@@ -31,12 +31,24 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          aws-region: eu-central-1
+
+      - name: Confirm AWS identity
+        run: aws sts get-caller-identity
 
       - name: Upload static export to S3
         run: aws s3 sync ./out s3://${{ secrets.S3_BUCKET }} --delete
 
+      - name: Check CloudFront distributions
+        run: |
+          aws cloudfront list-distributions \
+            --query "DistributionList.Items[*].{Id:Id,DomainName:DomainName,Status:Status}" \
+            --output table
+
       - name: Invalidate CloudFront cache
+        env:
+          AWS_REGION: us-east-1
+          AWS_DEFAULT_REGION: us-east-1
         run: |
           aws cloudfront create-invalidation \
             --distribution-id E2FJ4PECSN4JIJ \
