@@ -1,0 +1,76 @@
+IMPORTANT FILE TREE
+Generated: 2026-04-25
+
+beauty/
+|-- AGENTS.md
+|-- CLAUDE.md
+|-- README.md
+|-- package.json
+|-- next.config.ts
+|-- tsconfig.json
+|-- eslint.config.mjs
+|-- docs/
+|   |-- MASTER_CONTEXT.md
+|   |-- STATUS.md
+|   |-- NEXT_PHASE.md
+|   |-- DECISIONS.md
+|   `-- AI_RULES.md
+|-- public/
+|   `-- images/
+|       `-- beauty/
+`-- src/
+    |-- app/
+    |   |-- layout.tsx
+    |   |-- page.tsx
+    |   |-- globals.css
+    |   |-- robots.ts
+    |   |-- sitemap.ts
+    |   |-- opengraph-image.tsx
+    |   |-- twitter-image.tsx
+    |   |-- about/page.tsx
+    |   |-- contact/page.tsx
+    |   |-- faq/page.tsx
+    |   |-- gallery/page.tsx
+    |   |-- journal/page.tsx
+    |   |-- journal/[slug]/page.tsx
+    |   |-- pricing/page.tsx
+    |   |-- services/page.tsx
+    |   |-- services/[slug]/page.tsx
+    |   |-- specialists/page.tsx
+    |   `-- specialists/[slug]/page.tsx
+    |-- components/
+    |   |-- cards/
+    |   |   |-- blog-card.tsx
+    |   |   |-- service-card.tsx
+    |   |   |-- specialist-card.tsx
+    |   |   `-- testimonial-card.tsx
+    |   |-- layout/
+    |   |   |-- site-header.tsx
+    |   |   |-- site-shell.tsx
+    |   |   `-- site-footer.tsx
+    |   |-- sections/
+    |   |   |-- homepage.tsx
+    |   |   `-- cta-block.tsx
+    |   `-- ui/
+    |       |-- button.tsx
+    |       |-- badge.tsx
+    |       |-- container.tsx
+    |       |-- carousel.tsx
+    |       |-- comparison-slider.tsx
+    |       |-- media-frame.tsx
+    |       |-- page-intro.tsx
+    |       `-- section-heading.tsx
+    |-- data/
+    |   |-- site.ts
+    |   |-- services.ts
+    |   |-- specialists.ts
+    |   |-- pricing.ts
+    |   |-- blog-posts.ts
+    |   |-- gallery.ts
+    |   |-- testimonials.ts
+    |   |-- faq.ts
+    |   `-- media.ts
+    `-- lib/
+        |-- types.ts
+        |-- seo.ts
+        `-- cn.ts
